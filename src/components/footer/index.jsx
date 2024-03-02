@@ -88,8 +88,14 @@ const Footer = () => {
           </span>
 
           <div className="flex gap-2 justify-center">
-            <img src={Twitter} alt="" />
-            <img src={Discord} alt="" />
+              <a target="_blank" href="https://twitter.com/linea_erc404">
+              <img src={Twitter} alt="" />
+
+              </a>
+              <a target="_blank" href="https://discord.gg/QgfdFXnN">
+              <img src={Discord} alt="" />
+
+              </a>
           </div>
         </div>
       </div>

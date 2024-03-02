@@ -54,8 +54,8 @@ const Slider = () => {
       >
         <div className="cursor-pointer select-none">
           <Swiper
-            slidesPerView={5}
-            spaceBetween={400}
+            slidesPerView={3}
+            spaceBetween={100}
             loop={true}
             centeredSlides={true}
             speed={1200}

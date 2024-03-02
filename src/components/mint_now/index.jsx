@@ -15,7 +15,7 @@ const MintNow = () => {
       title: "Play to earn",
       img: Pic2,
       content:
-        "A Land-based Metaverse in which players can create their own characters. Unleash the full potential of majestic dinosaurs by providing them with top-notch care, forging new alliances, and engaging in thrilling in-game battles to expedite their evolution. games, quests, etc",
+        "A Land-based Metaverse in which players can create their own characters. Unleash the full potential of majestic dinosaurs by providing them with top-notch care, forging new alliances, and engaging in thrilling in-game battles to expedite their evolution, games, quests, etc",
     },
     {
       title: "Metaverse",
@@ -27,7 +27,7 @@ const MintNow = () => {
 
   return (
     <div
-      className="w-full h-full py-72"
+      className="w-full h-full "
       style={{
         backgroundImage: `url(${bg})`,
         backgroundRepeat: "no-repeat",
