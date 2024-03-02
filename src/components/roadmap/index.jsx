@@ -8,7 +8,7 @@ import bg from "../../assets/mint-now/bg.png"
 const RoadMap = () => {
   return (
     <div
-      className="w-full h-full lg:pb-[240px]"
+      className="w-full h-full lg:pb-[240px] pt-44"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundRepeat: "no-repeat",
