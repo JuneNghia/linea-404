@@ -41,9 +41,10 @@ function App() {
             </div>
           </div>
         </div>
+
+        <MintNow />
       </div>
 
-      <MintNow />
     </>
   );
 }
