@@ -86,7 +86,7 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className="flex">
+          <div className="flex !pr-4">
             <button className="!px-[12px] py-[10px] font-extrabold flex mr-3">
               <img className="w-[22px] h-[22px] sm:mr-[8px]" src={walletIcon} />
               <span className="hidden sm:inline-block">Connect Wallet</span>
