@@ -18,7 +18,9 @@ function App() {
           className="min-h-full h-[1100px] sm:h-[1100px] min-w-full bg-cover relative"
           style={{ backgroundImage: `url(${bg})` }}
         >
-          <Header />
+          <div className="overlay">
+            <Header />
+          </div>
           <Intro />
           <Slider />
         </div>

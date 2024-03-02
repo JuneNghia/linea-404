@@ -42,11 +42,12 @@ const data = [
 const Slider = () => {
   return (
     <>
-      <div className="bg-[#00000080] pb-8">
+      <div className="relative pb-8 z-[9999] cursor-pointer select-none" style={{backgroundColor: 'rgba(3, 1, 29, 0.1)'}}>
         <Swiper
           slidesPerView={5}
           spaceBetween={400}
           loop={true}
+          centeredSlides={true}
           speed={1200}
           autoplay={{
             delay: 2500,

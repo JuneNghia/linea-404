@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <header
-      className="fixed w-full top-0 left-0 z-[9999] border-b-[1px] border-[#424e7f]"
+      className="fixed w-full top-0 left-0 z-[999] border-b-[1px] border-[#424e7f]"
       style={{
         transition: "all 0.4s ease",
         backgroundColor: isScroll ? "#03011d" : "transparent",
