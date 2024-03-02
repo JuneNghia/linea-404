@@ -42,7 +42,7 @@ const data = [
 const Slider = () => {
   return (
     <>
-      <div >
+      <div className="bg-[#00000080] pb-8">
         <Swiper
           slidesPerView={5}
           spaceBetween={400}
