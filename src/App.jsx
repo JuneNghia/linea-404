@@ -30,7 +30,10 @@ function App() {
             <AboutUs />
           </div>
           <MintNow />
+          <div className="bg-green-900/20">
           <RoadMap />
+
+          </div>
         </div>
 
         <JoinUs />

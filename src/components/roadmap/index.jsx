@@ -18,7 +18,7 @@ const RoadMap = () => {
     >
       <div
         id="roadmap"
-        className="lg:max-w-7xl mx-auto px-4 lg:px-0 py-10 pt-52"
+        className="lg:max-w-7xl mx-auto px-4 lg:px-0 py-10 pt-10 pb-32"
       >
         <div className="text-center space-y-[8px]">
           <span
