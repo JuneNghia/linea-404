@@ -1,4 +1,5 @@
-import bg from "../src/assets/bg-1.jpg";
+import bg from "../src/assets/header/bg.png";
+import bg2 from "./assets/slider/bg.png";
 import AboutUs from "./components/about_us";
 import Footer from "./components/footer";
 
@@ -18,11 +19,11 @@ function App() {
           className="min-h-full h-[1100px] sm:h-[1100px] min-w-full bg-cover relative"
           style={{ backgroundImage: `url(${bg})` }}
         >
-          <div className="overlay">
-            <Header />
-          </div>
+          <Header />
           <Intro />
-          <Slider />
+          <div style={{ backgroundImage: `url(${bg2})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%' }} className="h-[25%]">
+            <Slider />
+          </div>
         </div>
 
         <div id="about-us">
@@ -30,10 +31,7 @@ function App() {
             <AboutUs />
           </div>
           <MintNow />
-          <div className="bg-green-900/20">
           <RoadMap />
-
-          </div>
         </div>
 
         <JoinUs />

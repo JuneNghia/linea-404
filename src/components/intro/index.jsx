@@ -4,7 +4,7 @@ import ethImg from "../../assets/eth.png";
 
 const Intro = () => {
   return (
-    <section className="relative z-[9999] max-w-4xl xl:max-w-7xl mx-[30px] sm:mx-auto flex flex-col lg:flex-row justify-center xl:justify-between items-center py-[70px] min-h-[850px] h-[50%] sm:h-[80%] lg:h-[80%] xl:h-[70%]">
+    <section className="relative z-[9] max-w-4xl xl:max-w-7xl mx-[30px] sm:mx-auto flex flex-col lg:flex-row justify-center xl:justify-between items-center py-[70px] min-h-[850px] h-[50%] sm:h-[80%] lg:h-[80%] xl:h-[70%]">
       <div className="text-white text-center lg:text-left">
         <h1 className="font-bold text-[36px] xl:text-[64px] mb-[30px]">DINO 404</h1>
         <h3 className="text-[16px] font-normal mb-[20px]">

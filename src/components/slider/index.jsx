@@ -42,7 +42,7 @@ const data = [
 const Slider = () => {
   return (
     <>
-      <div className="relative pb-8 z-[9999] cursor-pointer select-none" style={{backgroundColor: 'rgba(3, 1, 29, 0.1)'}}>
+      <div className="pb-8  cursor-pointer select-none" >
         <Swiper
           slidesPerView={5}
           spaceBetween={400}
