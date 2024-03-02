@@ -3,6 +3,7 @@ import bg from "../src/assets/bg-1.jpg";
 import Header from "./components/header";
 import Intro from "./components/intro";
 import MintNow from "./components/mint_now";
+import RoadMap from "./components/roadmap";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         </div>
 
         <MintNow />
+
+        <RoadMap />
       </div>
 
     </>
