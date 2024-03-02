@@ -1,5 +1,3 @@
-import bg from "../src/assets/header/bg.png";
-import bg2 from "./assets/slider/bg.png";
 import AboutUs from "./components/about_us";
 import Footer from "./components/footer";
 
@@ -14,16 +12,10 @@ function App() {
   return (
     <>
       <div className="w-screen max-w-full">
-        <div
-          id="home"
-          className="min-h-full h-[1100px] sm:h-[1100px] min-w-full bg-cover relative"
-          style={{ backgroundImage: `url(${bg})` }}
-        >
+        <div id="home" className="min-h-full min-w-full bg-cover relative">
           <Header />
           <Intro />
-          <div style={{ backgroundImage: `url(${bg2})`, backgroundRepeat: 'no-repeat', backgroundSize: '100%' }} className="h-[25%]">
-            <Slider />
-          </div>
+          <Slider />
         </div>
 
         <div id="about-us">
@@ -31,6 +23,9 @@ function App() {
             <AboutUs />
           </div>
           <MintNow />
+        </div>
+
+        <div id="roadmap">
           <RoadMap />
         </div>
 
