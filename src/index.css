@@ -20,12 +20,8 @@ h1, h2, h3 {
   color: white
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
 a:hover {
+  transition: all 0.4s ease;
   color: #535bf2;
 }
 

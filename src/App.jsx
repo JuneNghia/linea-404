@@ -11,6 +11,7 @@ function App() {
     <>
       <div className="w-screen max-w-full">
         <div
+        id="home"
           className="min-h-full h-[1090px] min-w-full bg-cover"
           style={{ backgroundImage: `url(${bg})` }}
         >
@@ -18,14 +19,14 @@ function App() {
           <Intro />
         </div>
 
-        <div>
+        <div id="about-us">
           <div className="sm:h-[900px] h-[1043px] lg:h-[800px] ">
             <AboutUs />
           </div>
           <MintNow />
         </div>
 
-        <div>
+        <div id="roadmap">
           <RoadMap />
         </div>
       </div>
