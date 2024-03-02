@@ -4,6 +4,7 @@ import homeIcon from "../src/assets/icon-home.png";
 import aboutUsIcon from "../src/assets/icon-about-us.png";
 import roadmapIcon from "../src/assets/icon-roadmap.png";
 import bridgeIcon from "../src/assets/icon-bridge.png";
+import MintNow from "./components/mint_now";
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
           </div>
         </div>
       </div>
+
+      <MintNow />
     </>
   );
 }
