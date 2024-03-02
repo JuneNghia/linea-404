@@ -4,15 +4,15 @@ import ethImg from "../../assets/eth.png";
 
 const Intro = () => {
   return (
-    <section className="max-w-7xl mx-auto flex py-[10%] justify-between">
-      <div className="text-white">
-        <h1 className="font-bold text-[64px] mb-[30px]">DINO 404</h1>
+    <section className="max-w-4xl xl:max-w-7xl mx-[30px] sm:mx-auto flex flex-col lg:flex-row justify-center xl:justify-between items-center py-[70px] min-h-[850px] h-[50%] sm:h-[92%] lg:h-[80%] xl:h-[85%]">
+      <div className="text-white text-center lg:text-left">
+        <h1 className="font-bold text-[36px] xl:text-[64px] mb-[30px]">DINO 404</h1>
         <h3 className="text-[16px] font-normal mb-[20px]">
           The first NFT ERC404 for Early Contributors on the Linea
         </h3>
         <h3 className="text-[16px] font-normal mb-[20px]">
           <br />
-          You will be eligible to mint an OG NFT if your wallet meets one of the{" "}
+          You will be eligible to mint an OG NFT if your wallet meets one of the
           <br />
           following conditions:
         </h3>
@@ -29,7 +29,7 @@ const Intro = () => {
         <h3 className="font-normal mt-[25px]">
           <span>Max 01 NFT Per Wallet.</span>
           <br />
-          <span className="flex items-center">
+          <span className="flex items-center justify-center lg:justify-start">
             Price:
             <span className="flex items-center">
               <img src={ethImg} className="ml-2 mr-1 inline-block" />
@@ -38,7 +38,7 @@ const Intro = () => {
           </span>
         </h3>
       </div>
-      <div>
+      <div className="hidden sm:block max-w-[350px] lg:max-w-full">
         <img src={groupImg}/>
       </div>
     </section>

@@ -14,9 +14,9 @@ const Header = () => {
       <div className="relative">
         <div className="relative max-w-7xl flex justify-between items-center mx-auto h-[64px] pt-10">
           <div className="inline-block">
-            <img width={300} src={logo} />
+            <img className="w-[150px] sm:w-[200px] lg:w-[264.66px]" src={logo} />
           </div>
-          <ul className="flex gap-[32px] text-[20px]  xs:text-[15px] font-extrabold">
+          <ul className="hidden gap-[32px] text-[20px] xs:text-[15px] xl:flex font-extrabold">
             <li className="flex items-center h-full gap-2 cursor-pointer hover:text-blue-500">
               <img src={homeIcon} />
               <div>Home</div>
