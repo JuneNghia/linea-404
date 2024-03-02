@@ -4,6 +4,7 @@ import AboutUs from "./components/about_us";
 import Header from "./components/header";
 import Intro from "./components/intro";
 import MintNow from "./components/mint_now";
+import RoadMap from "./components/roadmap";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </div>
           <MintNow />
         </div>
+        <MintNow />
+
+        <RoadMap />
       </div>
     </>
   );
