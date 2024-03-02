@@ -15,7 +15,7 @@ const JoinUs = () => {
               lineHeight: "22px",
               letterSpacing: "-0.005em",
             }}
-            className="lg:text-[20px] text-[16px]"
+            className="lg:text-[20px] text-[16px]  text-center"
           >
             Be part of our amazing community and stay tuned for any news.
           </p>
