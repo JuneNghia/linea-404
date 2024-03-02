@@ -38,14 +38,14 @@ const Header = () => {
 
   return (
     <header
-      className="fixed w-full top-0 left-0 z-[9999]"
+      className="fixed w-full top-0 left-0 z-[9999] border-b-[1px] border-[#424e7f]"
       style={{
         transition: "all 0.4s ease",
         backgroundColor: isScroll ? "#03011d" : "transparent",
       }}
     >
       <div className="relative">
-        <div className="relative max-w-7xl flex justify-between items-center mx-auto h-[100px]">
+        <div className="relative max-w-7xl flex justify-between items-center mx-auto h-[64px]">
           <div className="inline-block">
             <a href="/" className="cursor-pointer">
               <img
