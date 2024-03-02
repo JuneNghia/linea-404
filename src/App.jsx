@@ -24,9 +24,10 @@ function App() {
           </div>
           <MintNow />
         </div>
-        <MintNow />
 
-        <RoadMap />
+        <div>
+          <RoadMap />
+        </div>
       </div>
     </>
   );
