@@ -79,7 +79,7 @@ const Header = () => {
                   href="https://bridge.linea.build"
                   className="flex items-center"
                 >
-                  <img src={bridgeIcon} />
+                  <img className="mr-2" src={bridgeIcon} />
                   <div>Bridge</div>
                 </a>
               </li>
