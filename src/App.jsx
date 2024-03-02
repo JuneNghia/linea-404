@@ -6,6 +6,7 @@ import Intro from "./components/intro";
 import JoinUs from "./components/join_us";
 import MintNow from "./components/mint_now";
 import RoadMap from "./components/roadmap";
+import Slider from "./components/slider";
 
 function App() {
   return (
@@ -13,11 +14,12 @@ function App() {
       <div className="w-screen max-w-full">
         <div
           id="home"
-          className="min-h-full h-[1090px] min-w-full bg-cover"
+          className="min-h-full h-[1090px] min-w-full bg-cover relative"
           style={{ backgroundImage: `url(${bg})` }}
         >
           <Header />
           <Intro />
+          <Slider />
         </div>
 
         <div id="about-us">

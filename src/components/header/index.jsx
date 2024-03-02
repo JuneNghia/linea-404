@@ -7,13 +7,13 @@ import walletIcon from "../../../src/assets/wallet.svg";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-  const [isScroll, setIsScroll] = useState(false)
+  const [isScroll, setIsScroll] = useState(false);
 
   const listenScrollEvent = () => {
     if (window.scrollY < 73) {
-      return setIsScroll(false)
+      return setIsScroll(false);
     } else if (window.scrollY > 70) {
-      return setIsScroll(true)
+      return setIsScroll(true);
     }
   };
 
@@ -26,15 +26,20 @@ const Header = () => {
   return (
     <header
       className="fixed w-full top-0 left-0"
-      style={{ transition: "all 0.4s ease", backgroundColor: isScroll ? '#03011d' : 'transparent' }}
+      style={{
+        transition: "all 0.4s ease",
+        backgroundColor: isScroll ? "#03011d" : "transparent",
+      }}
     >
       <div className="relative">
-        <div className="relative max-w-7xl flex justify-between items-center mx-auto h-[64px]">
+        <div className="relative max-w-7xl flex justify-between items-center mx-auto h-[100px]">
           <div className="inline-block">
-            <img
-              className="w-[150px] sm:w-[200px] lg:w-[264.66px]"
-              src={logo}
-            />
+            <a href="/" className="cursor-pointer">
+              <img
+                className="w-[150px] sm:w-[200px] lg:w-[264.66px]"
+                src={logo}
+              />
+            </a>
           </div>
           <ul className="hidden gap-[32px] text-[20px] xs:text-[15px] xl:flex font-extrabold">
             <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
@@ -65,10 +70,13 @@ const Header = () => {
               </a>
             </li>
           </ul>
+          <span className="toggle">
+
+          </span>
           <div>
-            <button className="font-extrabold flex">
-              <img className="w-[22px] h-[22px] mr-[8px]" src={walletIcon} />
-              Connect Wallet
+            <button className="!px-[12px] py-[10px] font-extrabold flex">
+              <img className="w-[22px] h-[22px] sm:mr-[8px]" src={walletIcon} />
+              <span className="hidden sm:inline-block">Connect Wallet</span>
             </button>
           </div>
         </div>
