@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
+  const [showMenu, setShowMenu] = useState(false)
 
   const listenScrollEvent = () => {
     if (window.scrollY < 73) {
@@ -17,15 +18,27 @@ const Header = () => {
     }
   };
 
+  const handleShowMenu = () => {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+      setShowMenu(false)
+    } else {
+      x.style.display = "block";
+      setShowMenu(true)
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
 
     return () => window.removeEventListener("scroll", listenScrollEvent);
   }, []);
 
+
   return (
     <header
-      className="fixed w-full top-0 left-0"
+      className="fixed w-full top-0 left-0 z-[9999]"
       style={{
         transition: "all 0.4s ease",
         backgroundColor: isScroll ? "#03011d" : "transparent",
@@ -41,43 +54,97 @@ const Header = () => {
               />
             </a>
           </div>
-          <ul className="hidden gap-[32px] text-[20px] xs:text-[15px] xl:flex font-extrabold">
-            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
-              <a href="#home" className="flex items-center">
+          <div>
+            <ul className="hidden gap-[32px] text-[20px] xs:text-[15px] xl:flex font-extrabold">
+              <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
+                <a href="#home" className="flex items-center">
+                  <img className="mr-2" src={homeIcon} />
+                  <div>Home</div>
+                </a>
+              </li>
+              <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
+                <a href="#about-us" className="flex items-center">
+                  <img className="mr-2" src={aboutUsIcon} />
+                  <div>About us</div>
+                </a>
+              </li>
+              <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
+                <a href="#roadmap" className="flex items-center">
+                  <img className="mr-2" src={roadmapIcon} />
+                  <div>Roadmap</div>
+                </a>
+              </li>
+              <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
+                <a
+                  href="https://bridge.linea.build"
+                  className="flex items-center"
+                >
+                  <img src={bridgeIcon} />
+                  <div>Bridge</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex">
+            <button className="!px-[12px] py-[10px] font-extrabold flex mr-3">
+              <img className="w-[22px] h-[22px] sm:mr-[8px]" src={walletIcon} />
+              <span className="hidden sm:inline-block">Connect Wallet</span>
+            </button>
+            <button
+              onClick={handleShowMenu}
+              className="!px-[14px] py-[10px] lg:hidden"
+            >
+              {showMenu ? (
+                <i className="fa fa-times"></i>
+              ) : (
+                <i className="fa fa-bars"></i>
+              )}
+            </button>
+          </div>
+        </div>
+        <div className="topnav lg:hidden">
+          <div className="absolute z-[99] bg-[#283645]" id="myLinks">
+            <li className="h-full gap-2 cursor-pointer hover:text-blue-500 list-none">
+              <a
+                href="#home"
+                onClick={handleShowMenu}
+                style={{ display: "flex", alignItems: "center" }}
+              >
                 <img className="mr-2" src={homeIcon} />
-                <div>Home</div>
+                <span>Home</span>
               </a>
             </li>
-            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
-              <a href="#about-us" className="flex items-center">
+            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500 list-none">
+              <a
+                href="#about-us"
+                onClick={handleShowMenu}
+                style={{ display: "flex", alignItems: "center" }}
+              >
                 <img className="mr-2" src={aboutUsIcon} />
                 <div>About us</div>
               </a>
             </li>
-            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
-              <a href="#roadmap" className="flex items-center">
+            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500 list-none">
+              <a
+                href="#roadmap"
+                onClick={handleShowMenu}
+                style={{ display: "flex", alignItems: "center" }}
+              >
                 <img className="mr-2" src={roadmapIcon} />
                 <div>Roadmap</div>
               </a>
             </li>
-            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
+            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500 list-none">
               <a
                 href="https://bridge.linea.build"
-                className="flex items-center"
+                onClick={handleShowMenu}
+                style={{ display: "flex", alignItems: "center" }}
               >
-                <img src={bridgeIcon} />
+                <img className="mr-2" src={bridgeIcon} />
                 <div>Bridge</div>
               </a>
             </li>
-          </ul>
-          <span className="toggle">
-
-          </span>
-          <div>
-            <button className="!px-[12px] py-[10px] font-extrabold flex">
-              <img className="w-[22px] h-[22px] sm:mr-[8px]" src={walletIcon} />
-              <span className="hidden sm:inline-block">Connect Wallet</span>
-            </button>
           </div>
         </div>
       </div>

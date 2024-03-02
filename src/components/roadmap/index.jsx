@@ -6,7 +6,7 @@ import Egg4 from "../../assets/roadmap/egg_4.png";
 
 const RoadMap = () => {
   return (
-    <div className="lg:max-w-7xl mx-auto px-4 lg:px-0 py-10">
+    <div id="roadmap" className="lg:max-w-7xl mx-auto px-4 lg:px-0 py-10 mt-52">
       <div className="text-center space-y-[8px]">
         <span
           style={{ fontWeight: "800", lineHeight: "28px" }}
