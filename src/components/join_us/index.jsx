@@ -1,6 +1,6 @@
 const JoinUs = () => {
   return (
-    <div className="h-[300px] w-full flex justify-center lg:mt-[240px] join-us">
+    <div className="h-[300px] w-full flex justify-center join-us">
       <div className="lg:max-w-7xl mx-auto px-4 lg:px-0">
         <div className="flex justify-center items-center h-full flex-col gap-3">
           <h4
