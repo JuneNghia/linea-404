@@ -15,9 +15,10 @@ function App() {
           <Header />
           <Intro />
         </div>
+
+        <MintNow />
       </div>
 
-      <MintNow />
     </>
   );
 }
