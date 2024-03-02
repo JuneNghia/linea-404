@@ -27,7 +27,7 @@ const MintNow = () => {
 
   return (
     <div
-      className="w-full h-full"
+      className="w-full h-full pb-72"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundRepeat: "no-repeat",
