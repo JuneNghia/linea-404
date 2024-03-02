@@ -1,5 +1,6 @@
 import bg from "../src/assets/bg-1.jpg";
 import AboutUs from "./components/about_us";
+import Footer from "./components/footer";
 
 import Header from "./components/header";
 import Intro from "./components/intro";
@@ -29,9 +30,8 @@ function App() {
         <RoadMap />
 
         <JoinUs />
-        <div>
-          <RoadMap />
-        </div>
+
+        <Footer />
       </div>
     </>
   );
