@@ -4,7 +4,7 @@ import pic3 from "../../assets/slider/Velociraptor.png";
 import pic4 from "../../assets/slider/Stegosaurus.png";
 import pic5 from "../../assets/slider/Pachycephalosaurus.png";
 import pic6 from "../../assets/slider/Pachycephalosaurus-2.png";
-import bg from '../../assets/slider/bg.png'
+import bg from "../../assets/slider/bg.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -43,7 +43,15 @@ const data = [
 const Slider = () => {
   return (
     <>
-      <div style={{backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', paddingBottom: '100px'}}>
+      <div
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          paddingBottom: "100px",
+        }}
+      >
         <div className="cursor-pointer select-none">
           <Swiper
             slidesPerView={5}
@@ -64,11 +72,13 @@ const Slider = () => {
                   <div className="w-[200px] h-[200px] flex items-end">
                     <img src={item.image} />
                   </div>
-                  <div className="flex flex-col justify-end border border-1 border-l-0 rounded-r-sm rouded-tr-sm rounded-br-sm px-5">
-                    <p>{item.name}</p>
-                    <button className="flex items-center justify-center text-[15px] p-[12px] w-[151px] h-[33px] leading-[24px] mb-2">
-                      Random Minting
-                    </button>
+                  <div>
+                    <p className="text-white text-left font-bold text-[16px]">{item.name}</p>
+                    <div className="flex items-center border border-1 border-l-0 pt-[20px] rounded-r-[20px]  rounded-br-[20px] px-5">
+                      <button className="flex items-center justify-center text-[15px] p-[12px] w-[151px] h-[40px] leading-[24px] mb-5">
+                        Random Minting
+                      </button>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
