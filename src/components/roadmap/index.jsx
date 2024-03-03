@@ -8,7 +8,7 @@ import bg from "../../assets/mint-now/bg.png"
 const RoadMap = () => {
   return (
     <div
-      className="w-full h-full lg:pb-[240px] pt-44"
+      className="w-full h-full lg:pb-[240px] pt-44 px-0 xl:px-6 2xl:px-0"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundRepeat: "no-repeat",
@@ -310,7 +310,7 @@ const RoadMap = () => {
         </div>
 
         <div className="lg:hidden py-10">
-          <div className="space-y-10">
+          <div className="roadmap flex flex-col gap-y-20">
             <div className="flex">
               <div className="flex-1 mx-auto flex justify-center items-center">
                 <img className="" src={Egg1} alt="egg1" />
@@ -443,8 +443,8 @@ const RoadMap = () => {
               </div>
             </div>
 
-            <div className="flex-1 mx-auto flex justify-center items-center">
-              <div className="flex-1 mx-auto">
+            <div className="flex">
+              <div className="flex-1 mx-auto flex justify-center items-center">
                 <img className="" src={Egg3} alt="egg1" />
               </div>
               <div

@@ -28,7 +28,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="lg:max-w-7xl mx-auto px-4 lg:px-0">
+    <div className="lg:max-w-7xl mx-auto px-4 lg:px-0 xl:px-6 2xl:px-0">
       <div
         style={{
           borderBottom: "1px solid #22336d",

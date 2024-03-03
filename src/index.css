@@ -236,3 +236,15 @@ button:hover{
   font-size: 16px;
   color: #555;
 }
+
+@media only screen and (min-width: 360px) {
+  .roadmap {
+    row-gap: 4rem
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .roadmap {
+    row-gap: 2rem
+  }
+}
