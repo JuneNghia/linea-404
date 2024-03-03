@@ -4,7 +4,7 @@ import bg from "../../assets/about/about_background.png";
 const AboutUs = () => {
   return (
     <div
-      className="h-full w-full"
+      className="h-full w-full px-0 xl:px-6 2xl:px-0"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "100% 100%",

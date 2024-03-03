@@ -19,6 +19,7 @@ const Intro = () => {
 
   return (
     <section
+    className="px-0 xl:px-6 2xl:px-0"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundRepeat: "no-repeat",
