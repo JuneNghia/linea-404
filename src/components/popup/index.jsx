@@ -30,7 +30,7 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
           >
             <div
               style={{
-                padding: "8% 20px 30px",
+                padding: "2% 20px 30px",
               }}
             >
               <div
@@ -74,6 +74,7 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                   </h2>
                   <div className="pt-6 pb-10">
                     <img
+                      className="w-[60%] h-[60%] mx-auto"
                       style={{ borderRadius: "10px" }}
                       src={Collext13}
                       alt=""
@@ -93,12 +94,11 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                       <div>Quantity:</div>
                       <div>
                         <div
-                          className="flex justify-between items-center"
+                          className="flex justify-between items-center lg:w-[150px] w-[110px]"
                           style={{
                             border: "1px solid #eaeaea",
                             height: "45px",
                             borderRadius: "5px",
-                            width: "150px",
                             padding: "0 16px",
                           }}
                         >
