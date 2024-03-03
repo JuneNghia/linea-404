@@ -1,7 +1,5 @@
 import Collext13 from "../../assets/collect_13.png";
-import Plus from "../../assets/svgs/plus.svg";
 import Ethe from "../../assets/ethe.png";
-import Minus from "../../assets/svgs/minus.svg";
 import Delete from "../../assets/svgs/delete.svg";
 
 // eslint-disable-next-line react/prop-types
@@ -93,7 +91,8 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                     <li className="flex justify-between items-center">
                       <div>Quantity:</div>
                       <div>
-                        <div
+                        1 NFT
+                        {/* <div
                           className="flex justify-between items-center lg:w-[150px] w-[110px]"
                           style={{
                             border: "1px solid #eaeaea",
@@ -122,7 +121,7 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                               outline: "none",
                             }}
                             type="text"
-                            value={1}
+                            value="1 NFT"
                           />
                           <button
                             className="hover:opacity-80 duration-200 active:opacity-100 w-[24px] h-[24px]"
@@ -135,16 +134,16 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                           >
                             <img className="w-full h-full" src={Plus} alt="" />
                           </button>
-                        </div>
+                        </div> */}
                       </div>
                     </li>
 
                     <li className="flex justify-between items-center">
-                      <div>Total Price:</div>
+                      <div>Price:</div>
                       <div>
                         <span className="flex gap-2 items-center">
                           <img src={Ethe} alt="" />
-                          0.0018 ETH
+                          0.0018
                         </span>
                       </div>
                     </li>

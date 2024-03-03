@@ -2,8 +2,12 @@ import Pic1 from "../../assets/mint-now/pic1.png";
 import Pic2 from "../../assets/mint-now/pic2.png";
 import Pic3 from "../../assets/mint-now/pic3.png";
 import bg from '../../assets/mint-now/bg.png'
+import PopupMinting from "../popup";
+import { useState } from "react";
 
 const MintNow = () => {
+  const [popupMinting, setPopupMinting] = useState(false);
+
   const listItem = [
     {
       title: "Mint NFT",
@@ -39,6 +43,8 @@ const MintNow = () => {
         <div className="flex flex-col gap-[32px]">
           <div className="flex justify-center">
             <button
+                                    onClick={() => setPopupMinting(!popupMinting)}
+
               style={{
                 fontWeight: "800",
                 padding: "20px 0px",
@@ -93,6 +99,10 @@ const MintNow = () => {
           </div>
         </div>
       </div>
+      <PopupMinting
+        popupMinting={popupMinting}
+        setPopupMinting={setPopupMinting}
+      />
     </div>
   );
 };

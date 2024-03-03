@@ -31,63 +31,63 @@ import PopupMinting from "../popup";
 
 const data = [
   {
-    name: "Baryonyx",
+    name: "Velociraptor",
     image: pic1,
   },
   {
-    name: "Triceratops",
+    name: "Dimorphodon",
     image: pic2,
   },
   {
-    name: "Velociraptor",
+    name: "Apatosaurus",
     image: pic3,
   },
   {
-    name: "Stegosaurus",
+    name: "Pteranodon",
     image: pic4,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Stegosaurus",
     image: pic5,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Triceratops",
     image: pic6,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Ankylosaurus",
     image: pic7,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Ankylosaurus",
     image: pic8,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Baryonyx",
     image: pic9,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Carnotaurus",
     image: pic10,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Dilophosaurus",
     image: pic11,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Indominus rex",
     image: pic12,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Indominus rex",
     image: pic13,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Mosasaurus",
     image: pic14,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Nodosaurus",
     image: pic15,
   },
   {
@@ -95,7 +95,7 @@ const data = [
     image: pic16,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Spinosaurus",
     image: pic17,
   },
   {
@@ -103,11 +103,11 @@ const data = [
     image: pic17,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Tylosaurus",
     image: pic18,
   },
   {
-    name: "Pachycephalosaurus",
+    name: "Xrosus",
     image: pic19,
   },
   {
