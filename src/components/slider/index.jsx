@@ -26,7 +26,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation, Autoplay } from "swiper/modules";
-import { useBreakpointValue } from "../../hooks/useBreakpoint";
+import { useEffect, useState } from "react";
+import PopupMinting from "../popup";
 
 const data = [
   {
@@ -116,7 +117,28 @@ const data = [
 ];
 
 const Slider = () => {
-  const value = useBreakpointValue("md", "lg", "xl");
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [popupMinting, setPopupMinting] = useState(false);
+  const [width, setWidth] = useState(1024);
+
+  useEffect(() => {
+    if (width < 1024) {
+      setIsDesktop(false);
+    } else {
+      setIsDesktop(true);
+    }
+  }, [width]);
+
+  useEffect(() => {
+    const updateWindowDimensions = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
+    };
+
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => window.removeEventListener("resize", updateWindowDimensions);
+  }, []);
 
   return (
     <>
@@ -131,7 +153,7 @@ const Slider = () => {
       >
         <div className="cursor-pointer select-none">
           <Swiper
-            slidesPerView={value === "lg" ? 3 : 1}
+            slidesPerView={isDesktop ? 3 : 1}
             spaceBetween={100}
             loop={true}
             centeredSlides={true}
@@ -154,7 +176,10 @@ const Slider = () => {
                       {item.name}
                     </p>
                     <div className="flex items-center border border-1 border-l-0 pt-[20px] rounded-r-[20px]  rounded-br-[20px] px-5">
-                      <button className="flex items-center justify-center text-[15px] p-[12px] w-[151px] h-[40px] leading-[24px] mb-5">
+                      <button
+                        onClick={() => setPopupMinting(!popupMinting)}
+                        className="flex items-center justify-center text-[15px] p-[12px] w-[151px] h-[40px] leading-[24px] mb-5"
+                      >
                         Random Minting
                       </button>
                     </div>
@@ -165,6 +190,11 @@ const Slider = () => {
           </Swiper>
         </div>
       </div>
+
+      <PopupMinting
+        popupMinting={popupMinting}
+        setPopupMinting={setPopupMinting}
+      />
     </>
   );
 };
