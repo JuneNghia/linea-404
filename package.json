@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kodingdotninja/use-tailwind-breakpoint": "^0.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-responsive": "^9.0.2",
     "swiper": "^11.0.7"
   },
   "devDependencies": {
