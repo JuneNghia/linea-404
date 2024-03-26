@@ -2,19 +2,22 @@ import Footer from "./components/footer";
 
 import Header from "./components/header";
 import Intro from "./components/intro";
-import Slider from "./components/slider";
 import GamePlay from './components/game_play'
 import RoadMap from "./components/roadmap";
 import MintNow from "./components/mint_now";
+import GetDino from "./components/get_dino"
 
 function App() {
   return (
     <>
       <div className="w-screen max-w-full">
-        <div id="home" className="min-h-full min-w-full bg-cover relative">
           <Header />
+        <div id="home" className="min-h-full min-w-full bg-cover relative">
           <Intro />
-          <Slider />
+        </div>
+
+        <div className="mt-10">
+          <GetDino />
         </div>
 
         {/* <div id="about-us">
