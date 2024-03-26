@@ -1,11 +1,10 @@
-import AboutUs from "./components/about_us";
 import Footer from "./components/footer";
 
 import Header from "./components/header";
 import Intro from "./components/intro";
-import JoinUs from "./components/join_us";
-import MintNow from "./components/mint_now";
+import GamePlay from './components/game_play'
 import RoadMap from "./components/roadmap";
+import MintNow from "./components/mint_now";
 import GetDino from "./components/get_dino"
 
 function App() {
@@ -21,18 +20,26 @@ function App() {
           <GetDino />
         </div>
 
-        <div id="about-us">
+        {/* <div id="about-us">
           <div className="sm:h-[900px] h-[1043px] lg:h-[800px] ">
             <AboutUs />
           </div>
-          <MintNow />
+        </div> */}
+
+        <div id="game_play">
+          <GamePlay />
+        </div>
+
+        <div id="mint-now">
+        <MintNow />
+
         </div>
 
         <div id="roadmap">
           <RoadMap />
         </div>
 
-        <JoinUs />
+        {/* <JoinUs />  */}
 
         <Footer />
       </div>
