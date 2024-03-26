@@ -1,7 +1,10 @@
-import aboutUsImg from "../../assets/about-us.png";
+import aboutUsImg from "../../assets/get-dino/3.png";
 import bg from "../../assets/about/about_background.png";
+import { useState } from "react";
+import PopupMinting from "../popup";
 
 const AboutUs = () => {
+  const [popupMinting, setPopupMinting] = useState(false);
   return (
     <div
       className="h-full w-full px-0 xl:px-6 2xl:px-0"
@@ -17,25 +20,43 @@ const AboutUs = () => {
           <div>
             <img style={{ borderRadius: "10px" }} src={aboutUsImg} />
           </div>
-          <div>
-            <h3 className="font-extrabold text-[20px] text-[#fab2f1] mb-[6px] leading-[28px]">
-              FEATURED
-            </h3>
-            <h2 className="text-[60px] mb-[20px] font-extrabold leading-[64px]">
+          <div className="text-[18px] font-mulish leading-0">
+            <h2 className="title text-[60px] mb-[40px]">
               About Us
             </h2>
-            <p className="-tracking-[0.5%] font-normal text-[20px] text-justify">
+            <p className="!text-white">
               Discover a captivating world where dinosaurs have evolved over
-              thousands of years in our Blockchain game project on Linea. Engage
+              thousands of years in our blockchain game project on Linea. Engage
               in nurturing and witnessing their growth, and even create new
-              dinosaurs through the evolutionary process. With the secure and
-              transparent Linea ecosystem, each dinosaur is authenticated and
-              uniquely owned, ensuring an immersive and authentic gaming
-              experience.
+              dinosaurs through the evolutionary process.
             </p>
+            <br />
+            <p className="!text-white">
+              Powered by the secure and transparent Linea ecosystem and
+              leveraging the cutting-edge features of ERC404 technology, DINO404
+              ensures the uniqueness of each dinosaur and virtual asset.
+              Moreover, DINO404 introduces an exciting earning mechanism that
+              addresses liquidity challenges and inflation, delivering the most
+              authentic and captivating gaming experience.
+            </p>
+
+            <div className="flex gap-[10px] mt-4">
+          <button onClick={() => setPopupMinting(!popupMinting)}>
+            Minting
+          </button>
+          <button className=" !bg-transparent text-[#789D7C] border border-[#789D7C]">
+            Contact Us
+          </button>
+        </div>
           </div>
         </div>
+        
       </div>
+
+      <PopupMinting
+        popupMinting={popupMinting}
+        setPopupMinting={setPopupMinting}
+      />
     </div>
   );
 };

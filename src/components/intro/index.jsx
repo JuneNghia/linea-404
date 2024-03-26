@@ -47,7 +47,7 @@ const Intro = () => {
             <button onClick={() => setPopupMinting(!popupMinting)}>
               Minting
             </button>
-            <button className=" !bg-transparent text-[#789D7C] border border-[#789D7C]" onClick={() => setPopupMinting(!popupMinting)}>
+            <button className=" !bg-transparent text-[#789D7C] border border-[#789D7C]">
               Connect Wallet
             </button>
           </div>

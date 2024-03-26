@@ -2,16 +2,18 @@ import Footer from "./components/footer";
 
 import Header from "./components/header";
 import Intro from "./components/intro";
-import GamePlay from './components/game_play'
+import GamePlay from "./components/game_play";
 import RoadMap from "./components/roadmap";
 import MintNow from "./components/mint_now";
-import GetDino from "./components/get_dino"
+import GetDino from "./components/get_dino";
+import AboutUs from "./components/about_us";
+import Marketplace from "./components/marketplace";
 
 function App() {
   return (
     <>
       <div className="w-screen max-w-full">
-          <Header />
+        <Header />
         <div id="home" className="min-h-full min-w-full bg-cover relative">
           <Intro />
         </div>
@@ -20,19 +22,22 @@ function App() {
           <GetDino />
         </div>
 
-        {/* <div id="about-us">
-          <div className="sm:h-[900px] h-[1043px] lg:h-[800px] ">
+        <div id="about-us">
+          <div className="sm:h-[900px] h-[1043px] lg:h-[800px] my-28">
             <AboutUs />
           </div>
-        </div> */}
+        </div>
+
+        <div id="marketplace">
+          <Marketplace />
+        </div>
 
         <div id="game_play">
           <GamePlay />
         </div>
 
         <div id="mint-now">
-        <MintNow />
-
+          <MintNow />
         </div>
 
         <div id="roadmap">
