@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
 
   const listenScrollEvent = () => {
     if (window.scrollY < 73) {
@@ -22,10 +22,10 @@ const Header = () => {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
       x.style.display = "none";
-      setShowMenu(false)
+      setShowMenu(false);
     } else {
       x.style.display = "block";
-      setShowMenu(true)
+      setShowMenu(true);
     }
   };
 
@@ -35,16 +35,17 @@ const Header = () => {
     return () => window.removeEventListener("scroll", listenScrollEvent);
   }, []);
 
-
   return (
     <header
-      className="fixed w-full top-0 left-0 z-[999] border-b-[1px] border-[#424e7f]"
+      className={`fixed w-full top-0 left-0 z-[999] ${
+        isScroll ? "py-0" : "py-[20px]"
+      }`}
       style={{
         transition: "all 0.4s ease",
         backgroundColor: isScroll ? "#03011d" : "transparent",
       }}
     >
-      <div className="relative">
+      <div className="relative py-[15px]">
         <div className="relative max-w-7xl flex justify-between items-center mx-auto h-[64px]">
           <div className="inline-block">
             <a href="/" className="cursor-pointer">
@@ -55,7 +56,7 @@ const Header = () => {
             </a>
           </div>
           <div>
-            <ul className="hidden gap-[32px] text-[20px] xs:text-[15px] xl:flex font-extrabold">
+            <ul className="hidden gap-[32px] text-[20px] xs:text-[15px] xl:flex font-bold leading-[18px] -tracking-[1px]">
               <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
                 <a href="#home" className="flex items-center">
                   <img className="mr-2" src={homeIcon} />
@@ -69,12 +70,6 @@ const Header = () => {
                 </a>
               </li>
               <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
-                <a href="#roadmap" className="flex items-center">
-                  <img className="mr-2" src={roadmapIcon} />
-                  <div>Roadmap</div>
-                </a>
-              </li>
-              <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
                 <a
                   href="https://bridge.linea.build"
                   className="flex items-center"
@@ -83,11 +78,17 @@ const Header = () => {
                   <div>Bridge</div>
                 </a>
               </li>
+              <li className=" h-full gap-2 cursor-pointer hover:text-blue-500">
+                <a href="#roadmap" className="flex items-center">
+                  <img className="mr-2" src={roadmapIcon} />
+                  <div>Roadmap</div>
+                </a>
+              </li>
             </ul>
           </div>
 
           <div className="flex !pr-4">
-            <button className="!px-[12px] py-[10px] font-extrabold flex mr-3">
+            <button className="!px-[30px] flex items-center py-[10px] font-bold flex mr-3 text-[20px] !rounded-[20px] leading-[35px] -tracking-[1px]">
               <img className="w-[22px] h-[22px] sm:mr-[8px]" src={walletIcon} />
               <span className="hidden sm:inline-block">Connect Wallet</span>
             </button>
@@ -127,22 +128,22 @@ const Header = () => {
             </li>
             <li className=" h-full gap-2 cursor-pointer hover:text-blue-500 list-none">
               <a
-                href="#roadmap"
-                onClick={handleShowMenu}
-                style={{ display: "flex", alignItems: "center" }}
-              >
-                <img className="mr-2" src={roadmapIcon} />
-                <div>Roadmap</div>
-              </a>
-            </li>
-            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500 list-none">
-              <a
                 href="https://bridge.linea.build"
                 onClick={handleShowMenu}
                 style={{ display: "flex", alignItems: "center" }}
               >
                 <img className="mr-2" src={bridgeIcon} />
                 <div>Bridge</div>
+              </a>
+            </li>
+            <li className=" h-full gap-2 cursor-pointer hover:text-blue-500 list-none">
+              <a
+                href="#roadmap"
+                onClick={handleShowMenu}
+                style={{ display: "flex", alignItems: "center" }}
+              >
+                <img className="mr-2" src={roadmapIcon} />
+                <div>Roadmap</div>
               </a>
             </li>
           </div>
