@@ -1,12 +1,10 @@
-import AboutUs from "./components/about_us";
 import Footer from "./components/footer";
 
 import Header from "./components/header";
 import Intro from "./components/intro";
-import JoinUs from "./components/join_us";
-import MintNow from "./components/mint_now";
-import RoadMap from "./components/roadmap";
 import Slider from "./components/slider";
+import GamePlay from './components/game_play'
+import RoadMap from "./components/roadmap";
 
 function App() {
   return (
@@ -18,18 +16,22 @@ function App() {
           <Slider />
         </div>
 
-        <div id="about-us">
+        {/* <div id="about-us">
           <div className="sm:h-[900px] h-[1043px] lg:h-[800px] ">
             <AboutUs />
           </div>
           <MintNow />
+        </div> */}
+
+        <div id="game_play">
+          <GamePlay />
         </div>
 
         <div id="roadmap">
           <RoadMap />
         </div>
 
-        <JoinUs />
+        {/* <JoinUs />  */}
 
         <Footer />
       </div>
