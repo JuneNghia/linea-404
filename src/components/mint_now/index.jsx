@@ -1,13 +1,9 @@
 import Pic1 from "../../assets/mint-now/pic1.png";
 import Pic2 from "../../assets/mint-now/pic2.png";
 import Pic3 from "../../assets/mint-now/pic3.png";
-import bg from '../../assets/mint-now/bg.png'
-import PopupMinting from "../popup";
-import { useState } from "react";
+import Pach from "../../assets/mint-now/mintNow.png";
 
 const MintNow = () => {
-  const [popupMinting, setPopupMinting] = useState(false);
-
   const listItem = [
     {
       title: "Mint NFT",
@@ -30,79 +26,51 @@ const MintNow = () => {
   ];
 
   return (
-    <div
-      className="w-full h-full "
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "top",
-        backgroundSize: 'cover'
-      }}
-    >
+    <div className="w-full h-full ">
       <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto">
-        <div className="flex flex-col gap-[32px]">
-          <div className="flex justify-center">
-            <button
-                                    onClick={() => setPopupMinting(!popupMinting)}
+        <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
+          Mint Now
+        </h4>
 
-              style={{
-                fontWeight: "800",
-                padding: "20px 0px",
-                borderRadius: "8px",
-                lineHeight: "24px",
-              }}
-              className="bg-[#7C9B7C] w-[280px] lg:text-[40px] text-[32px] lg:w-[380px] flex justify-center items-center opacity-90 hover:opacity-100 border-none transition-all active:opacity-80 active:border-none"
-            >
-              Mint Now
-            </button>
+        <div className="flex gap-1">
+          <div className="w-[30%]">
+            <img src={Pach} alt="bg" />
           </div>
 
-          <div className="flex lg:flex-row flex-col gap-[40px] lg:gap-[23px] justify-center items-center">
+          <div className="flex-1">
             {listItem.map((item, index) => (
               <div
-                style={{ borderRadius: "16px" }}
-                className="w-[380px] bg-[#1A1A1A] overflow-hidden p-1.5 lg:h-[562px] h-[580px] "
+                className="h-[175px] w-full relative"
+                style={{
+                  border: "0.5px solid #8eb1ff6b",
+                  background: `${
+                    index !== 1 &&
+                    "linear-gradient(180deg, #789D7C -65%, rgba(0, 0, 0, 0) 100%)"
+                  }`,
+                  transform: "matrix(1, 0, 0, -1, 0, 0)",
+                }}
                 key={index}
               >
-                <div className="h-[210px]">
-                  <img
-                    className="h-full w-full"
-                    src={item.img}
-                    alt={`pic-${index}`}
-                  />
+                <div
+                  style={{
+                    transform: "matrix(1, 0, 0, -1, 0, 0)",
+                  }}
+                  className="absolute inset-0 flex justify-center items-center flex-col"
+                >
+                  <div className="px-10">
+                    <h4 className="text-[#789D7C] text-[24px] leading-8 font-bold">
+                      {item.title}
+                    </h4>
+                    <p className="text-[20px] leading-6 text-white/80 mt-1">
+                      {item.content}
+                    </p>
+                  </div>
                 </div>
-                <h4
-                  className="text-center pt-3 pb-2"
-                  style={{
-                    fontWeight: "800",
-                    fontSize: "24px",
-                    lineHeight: "32px",
-                  }}
-                >
-                  {item.title}
-                </h4>
-                <p
-                  style={{
-                    fontWeight: "400",
-                    fontSize: "20px",
-                    lineHeight: "32px",
-                    letterSpacing: "-0.005em",
-                    alignSelf: "stretch",
-                    textAlign: "justify",
-                  }}
-                  className="px-4 text-[#B9BDD1] pt-2 pb-4 lg:pt-0 lg:pb-0"
-                >
-                  {item.content}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <PopupMinting
-        popupMinting={popupMinting}
-        setPopupMinting={setPopupMinting}
-      />
     </div>
   );
 };

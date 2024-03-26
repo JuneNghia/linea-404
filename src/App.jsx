@@ -5,6 +5,7 @@ import Intro from "./components/intro";
 import Slider from "./components/slider";
 import GamePlay from './components/game_play'
 import RoadMap from "./components/roadmap";
+import MintNow from "./components/mint_now";
 
 function App() {
   return (
@@ -20,11 +21,15 @@ function App() {
           <div className="sm:h-[900px] h-[1043px] lg:h-[800px] ">
             <AboutUs />
           </div>
-          <MintNow />
         </div> */}
 
         <div id="game_play">
           <GamePlay />
+        </div>
+
+        <div id="mint-now">
+        <MintNow />
+
         </div>
 
         <div id="roadmap">
