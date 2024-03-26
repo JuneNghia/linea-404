@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full top-0 left-0 z-[999] ${
-        isScroll ? "py-0" : "py-[20px]"
+        isScroll ? "py-0" : "my-[20px]"
       }`}
       style={{
         transition: "all 0.4s ease",
@@ -88,8 +88,8 @@ const Header = () => {
           </div>
 
           <div className="flex !pr-4">
-            <button className="!px-[30px] flex items-center py-[10px] font-bold flex mr-3 text-[20px] !rounded-[20px] leading-[35px] -tracking-[1px]">
-              <img className="w-[22px] h-[22px] sm:mr-[8px]" src={walletIcon} />
+            <button className=" flex items-center flex mr-3 !text-[20px] ">
+              <img className="w-[30px] h-[24px] sm:mr-[8px]" src={walletIcon} />
               <span className="hidden sm:inline-block">Connect Wallet</span>
             </button>
             <button
