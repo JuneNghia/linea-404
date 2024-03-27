@@ -1,4 +1,3 @@
-import Egg1 from "../../assets/roadmap/egg_1.png";
 import Egg2 from "../../assets/roadmap/egg_2.png";
 import Egg3 from "../../assets/roadmap/egg_3.png";
 import Egg4 from "../../assets/roadmap/egg_4.png";
@@ -11,7 +10,7 @@ const Roadmap = () => {
         "Launch OG NFT Collection",
         "The team plans to expand the virtual world, introducing new environments, quests, and challenges for players to explore",
       ],
-      img: Egg1,
+      img: Egg3,
       bgColor:
         "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
       color: "#C32B12",
@@ -55,41 +54,56 @@ const Roadmap = () => {
     },
   ];
   return (
-    <div className="w-full h-full ">
+    <div className="w-full h-full">
       <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto">
-        <div className="flex justify-between">
+      <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
+          Roadmap
+        </h4>
+        <div className="flex justify-between my-32">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                background: "linear-gradient(0, #171717, #bfbcbc)",
+                borderRadius: "38px",
+                marginTop: `${(index === 0 || index === 3) && "72px"}`,
+              }}
+              className="relative  w-[290px] h-[362px]"
+            >
+              <div className="absolute w-[275px] h-[362px] left-0 right-0 top-2 mx-auto">
+                <div
+                  style={{ borderRadius: "38px" }}
+                  className="bg-black w-full h-full relative"
+                >
+                  <div style={{
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }} className="h-[169px] w-[152px] absolute -top-[90px]">
+                    <img
+                      className="w-full h-full"
+                      src={item.img}
+                      alt="gameplay"
+                    />
+                  </div>
 
-        {data.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              background: "linear-gradient(0, #000, #bfbcbc)",
-              borderRadius: "36px",
-            }}
-            className="relative  w-[290px] h-[362px] overflow-hidden"
-          >
-            <div className="absolute w-[275px] h-[362px] left-0 right-0 top-2 mx-auto">
-              <div
-                style={{ borderRadius: "34px" }}
-                className="bg-black w-full h-full relative"
-              >
-                <div className="h-[169px] w-[152px] absolute">
-                  <img className="w-full h-full" src={item.img} alt="gameplay" />
-                </div>
+                  <div style={{
+                    background: item.color,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    borderRadius: "12px",
+                    fontWeight: "700"
+                  }} className="absolute top-12 left-0 right-0 text-center text-[20px] px-3">{item.label}</div>
 
-                <div>{item.label}</div>
-
-                <div>
-                  {item.content.map((content, index) => (
-                    <div key={index}>{content}</div>
-                  ))}
+                  <div className="pt-28 w-[90%] mx-auto leading-[30px] text-[15px]">
+                    {item.content.map((content, index) => (
+                      <div key={index}>- {content}</div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-                </div>
-
+          ))}
+        </div>
       </div>
     </div>
   );
