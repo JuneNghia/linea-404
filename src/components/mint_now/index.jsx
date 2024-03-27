@@ -2,6 +2,7 @@ import Pic1 from "../../assets/mint-now/pic1.png";
 import Pic2 from "../../assets/mint-now/pic2.png";
 import Pic3 from "../../assets/mint-now/pic3.png";
 import Pach from "../../assets/mint-now/mintNow.png";
+import BgLeft from "../../assets/mint-now/bg-left.jpg";
 
 const MintNow = () => {
   const listItem = [
@@ -32,9 +33,14 @@ const MintNow = () => {
           Mint Now
         </h4>
 
-        <div className="flex gap-1">
-          <div className="w-[30%]">
-            <img src={Pach} alt="bg" />
+        <div className="flex py-20">
+          <div className="w-[38%] relative">
+            <div className="h-full flex justify-center items-center">
+              <img src={BgLeft} alt="bg" />
+            </div>
+            <div className="absolute h-[536px] w-[552px] top-[10%] -left-10">
+              <img className="h-full w-full" src={Pach} alt="bg" />
+            </div>
           </div>
 
           <div className="flex-1">
