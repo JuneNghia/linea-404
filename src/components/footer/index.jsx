@@ -1,6 +1,8 @@
-import Discord from "../../assets/discord.png";
-import Twitter from "../../assets/twitter.png";
 import Site from "../../assets/site_logo.png";
+import Discord from "../../assets/svgs/discord.svg";
+import Twitter from "../../assets/svgs/twitter.svg";
+import Logo from "../../assets/mint-now/logoFooter.png";
+import iconC from "../../assets/svgs/iconC.svg";
 
 const Footer = () => {
   const listInfo = [
@@ -28,91 +30,116 @@ const Footer = () => {
   ];
 
   return (
-    <div className="lg:max-w-7xl mx-auto px-4 lg:px-0 xl:px-6 2xl:px-0">
-      <div
-        style={{
-          borderBottom: "1px solid #22336d",
-        }}
-        className="flex gap-4 lg:gap-0 flex-col lg:flex-row justify-center lg:justify-between py-10"
-      >
-        <div className="flex-col gap-[16px] hidden lg:flex">
-          <div className="flex gap-[40px]">
-            {listInfo.map((item, index) => (
-              <div key={index}>
-                <span
-                  style={{ fontWeight: "600", lineHeight: "24px" }}
-                  className="text-[16px] "
-                >
-                  {item.title}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="flex gap-[40px]">
-            {listInfo2.map((item, index) => (
-              <div key={index}>
-                <span
-                  style={{ fontWeight: "600", lineHeight: "24px" }}
-                  className="text-[16px] "
-                >
-                  {item.title}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 justify-center gap-x-6 px-4">
-          {listInfo.concat(listInfo2).map((item, index) => (
-            <div key={index}>
-              <span
-                style={{ fontWeight: "600", lineHeight: "24px" }}
-                className="text-[14px]"
-              >
-                {item.title}
-              </span>
+    <div>
+      <div className="lg:max-w-7xl mx-auto px-4 lg:px-0">
+        <div className="flex justify-between">
+          <div className="">
+            <div className="h-[130px] w-[339px] relative">
+              <img
+                className="absolute inset-0 w-full h-full object-cover -left-[54px]"
+                src={Logo}
+                alt="logo"
+              />
             </div>
-          ))}
-        </div>
 
-        <div className="flex flex-col gap-4 justify-center">
-          <span
-            style={{
-              fontWeight: "400",
-              lineHeight: "22px",
-              letterSpacing: "-0.005em",
-            }}
-            className="text-[14px] text-[#8C93B2] text-center"
-          >
-            Follow us on
-          </span>
+            <div className="flex-col gap-[16px] hidden lg:flex">
+              <div className="flex gap-[40px]">
+                {listInfo.map((item, index) => (
+                  <div key={index}>
+                    <span
+                      style={{ fontWeight: "600", lineHeight: "24px" }}
+                      className="text-[16px] "
+                    >
+                      {item.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex gap-[40px]">
+                {listInfo2.map((item, index) => (
+                  <div key={index}>
+                    <span
+                      style={{ fontWeight: "600", lineHeight: "24px" }}
+                      className="text-[16px] "
+                    >
+                      {item.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
-          <div className="flex gap-2 justify-center">
-              <a target="_blank" href="https://twitter.com/linea_erc404">
-              <img src={Twitter} alt="" />
+          <div className="flex flex-col">
+            <div className="h-[130px]"></div>
 
-              </a>
-              <a target="_blank" href="https://discord.gg/QgfdFXnN">
-              <img src={Discord} alt="" />
+            <div className="flex flex-col">
+              {listInfo.map((item, index) => (
+                <div
+                  className="text-[#789D7C] text-[16px] leading-[33px]"
+                  key={index}
+                >
+                  {item.title}
+                </div>
+              ))}
+            </div>
+          </div>
 
-              </a>
+          <div className="flex flex-col w-[230px]">
+            <div className="h-[130px] relative">
+              <div className="absolute bottom-4 left-0">
+                <div className="flex gap-2">
+                  <div
+                    className="h-[60px] w-[60px] flex justify-center items-center"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.1)",
+                    }}
+                  >
+                    <img src={Twitter} />
+                  </div>
+
+                  <div
+                    className="h-[60px] w-[60px] flex justify-center items-center"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.1)",
+                    }}
+                  >
+                    <img src={Discord} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              {listInfo2.reverse().map((item, index) => (
+                <div
+                  className="text-[#789D7C] text-[16px] leading-[33px]"
+                  key={index}
+                >
+                  {item.title}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="py-5 flex flex-col lg:flex-row justify-between ">
-        <div className="flex items-center justify-center lg:justify-start">
-          <p className="mr-2.5 mt-1.5 text-[14px]">Build on</p>
-          <img src={Site} alt="" />
-        </div>
+      <div className="bg-[#999999]/60 h-[1px] w-full my-10" />
 
-        <div>
-          <p
-            style={{ letterSpacing: "-0.005em" }}
-            className="text-[14px] text-[#8C93B2] text-center lg:text-start"
+      <div className="lg:max-w-7xl mx-auto px-4 lg:px-0 pb-10">
+        <div className="text-[16px] leading-[33px] text-[#FFFFFF]/70 flex items-center">
+          Build on <img className="pb-2.5 pl-1.5" src={Site} alt="" />
+          <span
+            style={{
+              fontWeight: "700",
+            }}
+            className="flex items-center relative pl-6 font"
           >
-            Copyright © 2024 Dino. All Rights Reserved
-          </p>
+            <div className="absolute left-2 bottom-[9.5px] h-[12px] w-[12px]">
+              <img className="h-full w-full" src={iconC} alt="iconC" />
+            </div>
+            2024 DINO. ALL RIGHTS RESERVED
+          </span>
         </div>
       </div>
     </div>
