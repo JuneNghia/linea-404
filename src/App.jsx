@@ -45,12 +45,12 @@ function App() {
           <RoadMap />
         </div>
         <div id="join_us">
-        <JoinUs />
+          <JoinUs />
         </div>
 
-        {/*   */}
-
-        <Footer />
+        <div id="footer">
+          <Footer />
+        </div>
       </div>
     </>
   );
