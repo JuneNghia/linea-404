@@ -33,7 +33,7 @@ function App() {
           <Marketplace />
         </div>
 
-        <div id="game_play">
+        <div id="game_play" className="mt-40">
           <GamePlay />
         </div>
 

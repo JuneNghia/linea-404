@@ -24,15 +24,12 @@ import pic23 from "../../assets/slider/23.png";
 import pic24 from "../../assets/slider/24.png";
 import ethImg from "../../assets/eth.png";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import 'swiper/css/pagination';
-
-import { Navigation, Autoplay, Pagination  } from "swiper/modules";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PopupMinting from "../popup";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const data = [
   {
@@ -104,10 +101,6 @@ const data = [
     image: pic17,
   },
   {
-    name: "Ankylosaurus",
-    image: pic17,
-  },
-  {
     name: "Dilophosaurus",
     image: pic18,
   },
@@ -137,16 +130,72 @@ const data = [
   },
 ];
 
-const Slider = () => {
+const SliderCustom = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [popupMinting, setPopupMinting] = useState(false);
   const [width, setWidth] = useState(1024);
+  let sliderRef = useRef(null);
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
-    },
+  const next = () => {
+    sliderRef.slickNext();
+  };
+  const previous = () => {
+    sliderRef.slickPrev();
+  };
+
+  const settings = {
+    className: "center !pb-[50px]",
+    centerMode: true,
+    arrows: false,
+    accessibility: true,
+    dots: true,
+    dotsClass: "slick-dots slick-thumb",
+    centerPadding: "0",
+    infinite: false,
+    slidesToShow: 1,
+    speed: 500,
+    variableWidth: true,
+    rows: 2,
+    slidesPerRow: 4,
+    appendDots: (dots) => (
+      <div
+        style={{
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        <ul style={{ margin: "0px" }}>
+          <li onClick={previous}>
+            <div
+              id="previous"
+              className={`flex items-center justify-center ${
+                dots[0].props.className !== "slick-active" && "text-[#789D7C]"
+              }`}
+            >
+              <div>
+                <i className="fa-solid fa-arrow-left"></i>
+              </div>
+            </div>
+          </li>
+          {dots}{" "}
+          <li onClick={next}>
+            <div
+              id="next"
+              className={`flex items-center justify-center ${
+                dots[2].props.className !== "slick-active" && "text-[#789D7C]"
+              }`}
+            >
+              <div>
+                <i className="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div className="flex items-center justify-center">{i + 1}</div>
+    ),
   };
 
   useEffect(() => {
@@ -170,43 +219,60 @@ const Slider = () => {
 
   return (
     <>
-      <div
-        style={{
-          paddingBottom: "100px",
-        }}
-      >
-        <div className="cursor-pointer select-none">
-          <Swiper
-            slidesPerView={3}
-            pagination={pagination}
-            spaceBetween={100}
-            loop={true}
-            centeredSlides={true}
-            speed={1200}
-            autoplay={{
-              delay: 2500,
-              pauseOnMouseEnter: true,
-            }}
-            navigation={true}
-            modules={[Navigation, Autoplay, Pagination]}
-          >
-            {data.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="border">
-                  <div className="flex flex-col items-center">
-                    <span>{item.name}</span>
-                    <span className="flex gap-2">
-                      <img className="w-[13px] h-[20px]" src={ethImg} />
-                      <span>0.0018</span>
-                    </span>
+      <div className="cursor-pointer">
+        <Slider
+          ref={(slider) => {
+            sliderRef = slider;
+          }}
+          {...settings}
+        >
+          {data.map((item, index) => (
+            <div key={index} className="mb-[200px] h-[300px]">
+              <div className="flex flex-col items-center">
+                <span>{item.name}</span>
+                <span className="flex gap-2">
+                  <img className="w-[13px] h-[20px]" src={ethImg} />
+                  <span>0.0018</span>
+                </span>
 
-                    <img src={item.image}/>
-                  </div>
+                <img src={item.image} />
+              </div>
+            </div>
+          ))}
+        </Slider>
+        {/* <Swiper
+          slidesPerView={10}
+          // pagination={pagination}
+          spaceBetween={30}
+          grid={{
+            rows: 2,
+          }}
+          // loop={true}
+          // centeredSlides={true}
+          speed={1200}
+          autoplay={{
+            delay: 2500,
+            pauseOnMouseEnter: true,
+          }}
+          navigation={true}
+          modules={[Navigation, Autoplay, Pagination]}
+        >
+          {data.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="border">
+                <div className="flex flex-col items-center">
+                  <span>{item.name}</span>
+                  <span className="flex gap-2">
+                    <img className="w-[13px] h-[20px]" src={ethImg} />
+                    <span>0.0018</span>
+                  </span>
+
+                  <img src={item.image} />
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper> */}
       </div>
 
       <PopupMinting
@@ -217,4 +283,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default SliderCustom;
