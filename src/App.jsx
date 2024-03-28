@@ -8,6 +8,7 @@ import MintNow from "./components/mint_now";
 import GetDino from "./components/get_dino";
 import AboutUs from "./components/about_us";
 import Marketplace from "./components/marketplace";
+import JoinUs from "./components/join_us";
 
 function App() {
   return (
@@ -43,8 +44,11 @@ function App() {
         <div id="roadmap">
           <RoadMap />
         </div>
+        <div id="join_us">
+        <JoinUs />
+        </div>
 
-        {/* <JoinUs />  */}
+        {/*   */}
 
         <Footer />
       </div>
