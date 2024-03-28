@@ -1,4 +1,4 @@
-import Egg2 from "../../assets/roadmap/egg_2.png";
+import Egg2 from "../../assets/roadmap/trungg 1.png";
 import Egg3 from "../../assets/roadmap/egg_3.png";
 import Egg4 from "../../assets/roadmap/egg_4.png";
 
@@ -55,11 +55,57 @@ const Roadmap = () => {
   ];
   return (
     <div className="w-full h-full">
-      <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto">
-      <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
+      <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto relative">
+        <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
           Roadmap
         </h4>
-        <div className="flex justify-between my-32">
+        <div className="absolute left-0 top-[175px] right-0 flex justify-between z-10 opacity-60">
+          <div className="w-[275px]">
+            <div
+              className=" w-[90%] mx-auto h-[280px] "
+              style={{
+                backgroundColor: "rgba(184, 32, 11, 1)",
+                marginTop: "72px",
+                filter: "blur(150px)",
+              }}
+            />
+          </div>
+
+          <div className="w-[275px]">
+            <div
+              className=" w-[90%] mx-auto h-[280px] "
+              style={{
+                backgroundColor: "rgba(66, 135, 37, 1)",
+                marginTop: "72px",
+                filter: "blur(150px)",
+              }}
+            />
+          </div>
+
+          <div className="w-[275px]">
+            <div
+              className=" w-[90%] mx-auto h-[280px] "
+              style={{
+                backgroundColor: "rgba(239, 140, 32, 1)",
+                marginTop: "72px",
+                filter: "blur(150px)",
+              }}
+            />
+          </div>
+
+          <div className="w-[275px]">
+            <div
+              className=" w-[90%] mx-auto h-[280px] "
+              style={{
+                backgroundColor: "rgba(194, 29, 116, 1)",
+                marginTop: "72px",
+                filter: "blur(150px)",
+              }}
+            />
+          </div>
+        </div>
+
+        <div className="flex justify-between my-32 relative z-0">
           {data.map((item, index) => (
             <div
               key={index}
@@ -75,26 +121,50 @@ const Roadmap = () => {
                   style={{ borderRadius: "38px" }}
                   className="bg-black w-full h-full relative"
                 >
-                  <div style={{
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                  }} className="h-[169px] w-[152px] absolute -top-[90px]">
-                    <img
-                      className="w-full h-full"
-                      src={item.img}
-                      alt="gameplay"
-                    />
+                  {index === 1 ? (
+                    <div
+                      style={{
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                      }}
+                      className="h-[257px] w-[240px] absolute -top-[132px]"
+                    >
+                      <img
+                        className="w-full h-full object-cover"
+                        src={item.img}
+                        alt="gameplay"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      style={{
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                      }}
+                      className="h-[169px] w-[152px] absolute -top-[90px]"
+                    >
+                      <img
+                        className="w-full h-full object-cover"
+                        src={item.img}
+                        alt="gameplay"
+                      />
+                    </div>
+                  )}
+
+                  <div
+                    style={{
+                      background: item.color,
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      borderRadius: "12px",
+                      fontWeight: "700",
+                    }}
+                    className="absolute top-12 left-0 right-0 text-center text-[20px] px-3"
+                  >
+                    {item.label}
                   </div>
 
-                  <div style={{
-                    background: item.color,
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    borderRadius: "12px",
-                    fontWeight: "700"
-                  }} className="absolute top-12 left-0 right-0 text-center text-[20px] px-3">{item.label}</div>
-
-                  <div className="pt-28 w-[90%] mx-auto leading-[30px] text-[15px]">
+                  <div className="pt-28 w-[90%] mx-auto leading-[30px] text-[16px]">
                     {item.content.map((content, index) => (
                       <div key={index}>- {content}</div>
                     ))}
