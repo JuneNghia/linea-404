@@ -30,7 +30,7 @@ const Footer = () => {
   ];
 
   return (
-    <div>
+    <div className="mt-20">
       <div className="lg:max-w-7xl mx-auto px-4 lg:px-0">
         <div className="flex justify-between">
           <div className="">

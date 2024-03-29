@@ -13,18 +13,18 @@ import JoinUs from "./components/join_us";
 function App() {
   return (
     <>
-      <div className="w-screen max-w-full">
+      <div className="w-screen overflow-hidden">
         <Header />
-        <div id="home" className="min-h-full min-w-full bg-cover relative">
+        <div id="home">
           <Intro />
         </div>
 
-        <div className="mt-10">
+        <div className="mt-40">
           <GetDino />
         </div>
 
         <div id="about-us">
-          <div className="sm:h-[900px] h-[1043px] lg:h-[800px] my-28">
+          <div className="my-16">
             <AboutUs />
           </div>
         </div>

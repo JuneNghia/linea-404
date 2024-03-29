@@ -27,8 +27,8 @@ const MintNow = () => {
   ];
 
   return (
-    <div className="w-full h-full ">
-      <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto">
+    <div className="w-full h-full relative mb-20 mt-40">
+      <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto relative z-10">
         <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
           Mint Now
         </h4>
@@ -77,6 +77,22 @@ const MintNow = () => {
           </div>
         </div>
       </div>
+
+      <div
+        style={{
+          background: "#F5C40E",
+          filter: "blur(150px)",
+        }}
+        className="h-[439px] w-[715px] absolute bottom-0 opacity-20 -right-[200px] z-0"
+      />
+
+      <div
+        style={{
+          background: "#7C0000",
+          filter: "blur(150px)",
+        }}
+        className="h-[357px] w-[519px] absolute top-[246px] opacity-40 left-[50px] z-0"
+      />
     </div>
   );
 };

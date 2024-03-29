@@ -6,8 +6,8 @@ import LeftBg from "../../assets/mint-now/leftBg.png";
 
 const Index = () => {
   return (
-    <div>
-      <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto">
+    <div className="relative">
+      <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto z-10 relative">
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-5">
             <div className="space-y-6">
@@ -96,6 +96,14 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      <div
+        style={{
+          background: "#EB31A5",
+          filter: "blur(150px)",
+        }}
+        className="h-[439px] w-[439px] absolute -top-[100px] opacity-30 -right-[100px] z-0"
+      />
     </div>
   );
 };

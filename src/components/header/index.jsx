@@ -3,7 +3,7 @@ import homeIcon from "../../../src/assets/icon-home.png";
 import aboutUsIcon from "../../../src/assets/icon-about-us.png";
 import roadmapIcon from "../../../src/assets/icon-roadmap.png";
 import bridgeIcon from "../../../src/assets/icon-bridge.png";
-import walletIcon from "../../../src/assets/wallet.svg";
+import walletIcon from "../../../src/assets/svgs/wallet.svg";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -50,6 +50,7 @@ const Header = () => {
           <div className="inline-block">
             <a href="/" className="cursor-pointer">
               <img
+                style={{ transform: "translateX(-42px)" }}
                 className="w-[150px] sm:w-[200px] lg:w-[264.66px]"
                 src={logo}
               />
@@ -87,9 +88,20 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className="flex !pr-4">
-            <button className=" flex items-center flex mr-3 !text-[20px] ">
-              <img className="w-[30px] h-[24px] sm:mr-[8px]" src={walletIcon} />
+          <div className="flex">
+            <button
+              style={{
+                padding: "6px 24px",
+              }}
+              className="items-center flex mr-3 !text-[20px] "
+            >
+              <img
+                style={{
+                  transform: "translateX(4px)",
+                }}
+                className="w-[30px] h-[24px] sm:mr-[8px]"
+                src={walletIcon}
+              />
               <span className="hidden sm:inline-block">Connect Wallet</span>
             </button>
             <button
