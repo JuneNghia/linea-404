@@ -1,6 +1,10 @@
-import Collext13 from "../../assets/collect_13.png";
 import Ethe from "../../assets/ethe.png";
 import Delete from "../../assets/svgs/delete.svg";
+import Twitter from "../../assets/svgs/twitter.svg";
+import Discord from "../../assets/svgs/discord.svg";
+import iconC from "../../assets/svgs/iconC.svg";
+import Site from "../../assets/site_logo.png";
+import Dino1 from "../../assets/get-dino/3.png";
 
 // eslint-disable-next-line react/prop-types
 const PopupMinting = ({ popupMinting, setPopupMinting }) => {
@@ -33,10 +37,15 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
             >
               <div
                 style={{
-                  maxWidth: "500px",
+                  maxWidth: "636px",
+                  height: "678px",
                   width: "100%",
                   margin: "auto",
                   position: "relative",
+                  background: "#333333",
+                  borderRadius: "10px",
+                  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                  overflow: "hidden",
                 }}
                 onClick={handleContentClick}
               >
@@ -61,27 +70,148 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                 </div>
                 <div
                   style={{
-                    backgroundColor: "#1a1a1a",
-                    padding: "50px",
+                    padding: "50px 50px 30px 50px",
                     borderRadius: "10px",
                     opacity: "0.9",
                   }}
                 >
-                  <h2 className="text-white text-[22px] text-center">
+                  <h2
+                    style={{
+                      fontWeight: "900",
+                      fontSize: "36px",
+                      letterSpacing: "-1px",
+                    }}
+                    className="text-white text-[22px] text-center leading-[35px]"
+                  >
                     MINT YOUR NFT
                   </h2>
-                  <div className="pt-6 pb-10">
-                    <img
-                      className="w-[60%] h-[60%] mx-auto"
-                      style={{ borderRadius: "10px" }}
-                      src={Collext13}
-                      alt=""
-                    />
-                  </div>
+                  <div className="pt-7">
+                    <div className="relative h-[188px] w-full">
+                      <div className="w-[187px] h-[191px] absolute left-[145px] z-10">
+                        <div
+                          className="flex justify-center items-center"
+                          style={{
+                            borderRadius: "8px",
+                            transform: "rotate(-7.58deg)",
+                            width: "171.55px",
+                            height: "165.19px",
+                            overflow: "hidden",
+                          }}
+                        >
+                          <div
+                            style={{
+                              position: "absolute",
+                              background:
+                                "radial-gradient(100% 100% at -125.75% 5.36%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+                              backdropFilter: "blur(12px)",
+                            }}
+                            className="inset-0 h-full w-full z-20"
+                          />
 
+                          <div
+                            style={{
+                              position: "absolute",
+                              background:
+                                "radial-gradient(100% 100% at 0% 0%, rgba(235, 49, 165, 0.2) 0%, rgba(120, 157, 124, 0.2) 100%)",
+                              backdropFilter: "blur(12px)",
+                            }}
+                            className="inset-0 h-full w-full z-10"
+                          />
+
+                          <div
+                            style={{
+                              borderRadius: "20px",
+                              background: "#FFFFFF",
+                              height: "40.25px",
+                              width: "27.38px",
+                              left: "12px",
+                              backdropFilter: "blur(150px)",
+                              bottom: "46px",
+                            }}
+                            className="absolute z-0"
+                          />
+                          <div
+                            style={{
+                              backgroundColor: "#EC811F",
+                              borderRadius: "8px",
+                              boxShadow:
+                                "inset 0px 0px 4px rgba(0, 0, 0, 0.25)",
+                              height: "136.15px",
+                              width: "146.13px",
+                              position: "relative",
+                              zIndex: 30,
+                            }}
+                          >
+                            <img src={Dino1} />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="w-[187px] h-[191px] absolute top-1.5 right-[95px] z-0">
+                        <div
+                          className="flex justify-center items-center"
+                          style={{
+                            background:
+                              "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+                            backdropFilter: "blur(12px)",
+                            borderRadius: "8px",
+                            transform: "rotate(4.66deg)",
+                            width: "151.72px",
+                            height: "157.55px",
+                          }}
+                        >
+                          <div
+                            style={{
+                              position: "absolute",
+                              background:
+                                "radial-gradient(100% 100% at -125.75% 5.36%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+                              backdropFilter: "blur(12px)",
+                            }}
+                            className="inset-0 h-full w-full z-10"
+                          />
+
+                          <div
+                            style={{
+                              background: "#EC811F",
+                              filter: "blur(50px)",
+                              height: "75px",
+                              width: "75px",
+                              right: "-10px",
+                            }}
+                            className="absolute z-0 opacity-30"
+                          />
+
+                          <div
+                            style={{
+                              backgroundColor: "#789D7C",
+                              borderRadius: "8px",
+                              boxShadow:
+                                "inset 0px 0px 4px rgba(0, 0, 0, 0.25)",
+                              width: "125.04px",
+                              height: "134.21px",
+                              position: "relative",
+                              zIndex: 20,
+                            }}
+                          >
+                            <img
+                              style={{
+                                transform:
+                                  "matrix(-0.98, -0.21, -0.21, 0.98, 0, 0)",
+                              }}
+                              src={Dino1}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <ul
-                    style={{ fontWeight: "600", fontSize: "16px" }}
-                    className="text-white pb-8 space-y-4"
+                    style={{
+                      fontWeight: "500",
+                      fontSize: "20px",
+                      fontStyle: "normal",
+                    }}
+                    className="text-white pb-8 space-y-4 leading-[35px]"
                   >
                     <li className="flex justify-between">
                       <div>Total supply:</div>
@@ -90,52 +220,7 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
 
                     <li className="flex justify-between items-center">
                       <div>Quantity:</div>
-                      <div>
-                        1 NFT
-                        {/* <div
-                          className="flex justify-between items-center lg:w-[150px] w-[110px]"
-                          style={{
-                            border: "1px solid #eaeaea",
-                            height: "45px",
-                            borderRadius: "5px",
-                            padding: "0 16px",
-                          }}
-                        >
-                          <button
-                            className="hover:opacity-80 duration-200 active:opacity-100 w-[28px] h-[24px]"
-                            style={{
-                              outline: "none",
-                              padding: "0",
-                              fontSize: "24px",
-                              backgroundColor: "transparent",
-                            }}
-                          >
-                            <img className="h-full w-full" src={Minus} alt="" />
-                          </button>
-                          <input
-                            style={{
-                              width: "40px",
-                              textAlign: "center",
-                              border: "none",
-                              backgroundColor: "transparent",
-                              outline: "none",
-                            }}
-                            type="text"
-                            value="1 NFT"
-                          />
-                          <button
-                            className="hover:opacity-80 duration-200 active:opacity-100 w-[24px] h-[24px]"
-                            style={{
-                              outline: "none",
-                              padding: "0",
-                              fontSize: "24px",
-                              backgroundColor: "transparent",
-                            }}
-                          >
-                            <img className="w-full h-full" src={Plus} alt="" />
-                          </button>
-                        </div> */}
-                      </div>
+                      <div>1 NFT</div>
                     </li>
 
                     <li className="flex justify-between items-center">
@@ -150,15 +235,62 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                   </ul>
                   <button
                     style={{
-                      fontWeight: "600",
+                      fontWeight: "700",
                       padding: "12px 0px",
-                      borderRadius: "8px",
+                      borderRadius: "20px",
                       lineHeight: "24px",
+                      fontSize: "20px",
                     }}
                     className="bg-[#7C9B7C] text-white uppercase text-[18px] w-full flex justify-center items-center opacity-90 hover:opacity-100 border-none transition-all active:opacity-80 active:border-none"
                   >
                     Mint Now
                   </button>
+                </div>
+
+                <div
+                  style={{
+                    background: "rgba(255, 255, 255, 0.2)",
+                  }}
+                  className="h-[1px] w-full mb-4"
+                />
+                <div className="flex justify-center gap-2">
+                  <a target="_blank" href="https://twitter.com/linea_erc404">
+                    <div
+                      style={{
+                        background: "rgba(255, 255, 255, 0.1)",
+                      }}
+                      className="h-[36px] w-[36px] flex justify-center items-center rounded-[2px]"
+                    >
+                      <img className="w-[16px] h-[16px]" src={Twitter} alt="" />
+                    </div>
+                  </a>
+
+                  <a target="_blank" href="https://discord.gg/YFvNXUXE">
+                    <div
+                      style={{
+                        background: "rgba(255, 255, 255, 0.1)",
+                      }}
+                      className="h-[36px] w-[36px] flex justify-center items-center rounded-[2px]"
+                    >
+                      <img className="w-[16px] h-[16px]" src={Discord} alt="" />
+                    </div>
+                  </a>
+                </div>
+
+                <div className="text-[10px] leading-[33px] text-[#FFFFFF]/70 flex items-center justify-center py-4">
+                  Build on{" "}
+                  <img className="pb-2.5 pl-1.5 h-[28px]" src={Site} alt="" />
+                  <span
+                    style={{
+                      fontWeight: "700",
+                    }}
+                    className="flex items-center relative pl-6 font"
+                  >
+                    <div className="absolute left-2 bottom-[9.5px] h-[12px] w-[12px]">
+                      <img className="h-full w-full" src={iconC} alt="iconC" />
+                    </div>
+                    2024 DINO. ALL RIGHTS RESERVED
+                  </span>
                 </div>
               </div>
             </div>

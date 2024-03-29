@@ -140,7 +140,8 @@ const Header = () => {
             </li>
             <li className=" h-full gap-2 cursor-pointer hover:text-blue-500 list-none">
               <a
-                href="https://bridge.linea.build"
+                target="_blank"
+                href="https://bridge.linea.build/"
                 onClick={handleShowMenu}
                 style={{ display: "flex", alignItems: "center" }}
               >

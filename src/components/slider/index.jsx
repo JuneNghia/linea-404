@@ -75,82 +75,82 @@ const data = [
   {
     name: "Ankylosaurus",
     image: pic9,
-    bg:"AFA748"
+    bg: "AFA748",
   },
   {
     name: "Baryonyx",
     image: pic10,
-    bg: "95B0AE"
+    bg: "95B0AE",
   },
   {
     name: "Dimorphodon",
     image: pic11,
-    bg: "E19242"
+    bg: "E19242",
   },
   {
     name: "Tylosaurus",
     image: pic12,
-    bg: "4D535E"
+    bg: "4D535E",
   },
   {
     name: "Dilophosaurus",
     image: pic13,
-    bg: "AFA748"
+    bg: "AFA748",
   },
   {
     name: "Ankylosaurus",
     image: pic14,
-    bg: "95B0AE"
+    bg: "95B0AE",
   },
   {
     name: "Mosasaurus",
     image: pic15,
-    bg: "E19242"
+    bg: "E19242",
   },
   {
     name: "Apatosaurus",
     image: pic16,
-    bg: "4D535E"
+    bg: "4D535E",
   },
   {
     name: "Ankylosaurus",
     image: pic17,
-    bg: "AFA748"
+    bg: "AFA748",
   },
   {
     name: "Dilophosaurus",
     image: pic18,
-    bg: "95B0AE"
+    bg: "95B0AE",
   },
   {
     name: "Mosasaurus",
     image: pic19,
-    bg: "76B2C5"
+    bg: "76B2C5",
   },
   {
     name: "Triceratops",
     image: pic20,
-    bg: "4D535E"
+    bg: "4D535E",
   },
   {
     name: "Baryonyx",
     image: pic21,
-    bg: "AFA748"
+    bg: "AFA748",
   },
   {
     name: "Ankylosaurus",
     image: pic22,
-    bg: "95B0AE"
+    bg: "95B0AE",
   },
   {
     name: "Spinosaurus",
     image: pic23,
-    bg: 'E19242'
+    bg: "E19242",
   },
   {
     name: "Indominus",
     image: pic24,
-    bg: "764CC0"
+    bg: "764CC0",
   },
 ];
 
@@ -160,7 +160,7 @@ const SliderCustom = () => {
   const [width, setWidth] = useState(1024);
   let sliderRef = useRef(null);
 
-  console.log(isDesktop)
+  console.log(isDesktop);
   const next = () => {
     sliderRef.slickNext();
   };
@@ -271,7 +271,7 @@ const SliderCustom = () => {
                           filter: `blur(150px)`,
                           background: `#${item.bg}`,
                         }}
-                        className="absolute inset-0 h-[258px] w-[378px] opacity-40"
+                        className="absolute inset-0 h-[258px] w-[378px] opacity-70"
                       />
                     </div>
 
@@ -415,7 +415,7 @@ const SliderCustom = () => {
                       )}
 
                       {index === 11 && (
-                        <div className="absolute h-[360px] w-[340px] -bottom-[50px] -left-[38px]">
+                        <div className="absolute h-[340px] w-[320px] -bottom-[50px] -left-[20px]">
                           <img
                             className="h-full w-full object-cover"
                             src={data[11]?.image}

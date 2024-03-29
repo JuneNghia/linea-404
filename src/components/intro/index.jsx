@@ -69,7 +69,7 @@ const Intro = () => {
           </div>
 
           <div className="font-normal mt-[25px] text-[17px] leading-[23px]">
-            <span>Max 01 NFT Per Wallet.</span>
+            <span>Max 01 NFT Per Wallet</span>
             <br />
             <span className="flex items-center justify-center lg:justify-start">
               Price:
@@ -88,7 +88,7 @@ const Intro = () => {
             backgroundBlendMode: "color-dodge",
             mixBlendMode: "color-dodge",
           }}
-          className="top-0 absolute w-[797px] h-[190px] opacity-50 -left-[220px] z-10"
+          className="-top-[8px] absolute w-[797px] h-[190px] opacity-90 -left-[232px] z-10"
         />
 
         <div

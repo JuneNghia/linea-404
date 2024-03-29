@@ -62,24 +62,43 @@ const JoinUs = () => {
                 style={{
                   letterSpacing: "-1px",
                   fontWeight: "700",
-                  padding: "5px 20px",
+                  padding: "5px 0px",
                 }}
                 className="text-[24px] leading-[35px]"
               >
-                Join Discord
+                <a
+                  target="_blank"
+                  style={{
+                    padding: "12px 24px",
+                  }}
+                  className="hover:text-white"
+                  href="https://discord.gg/YFvNXUXE"
+                >
+                  Join Discord
+                </a>
               </button>
               <button
                 style={{
                   letterSpacing: "-1px",
                   fontWeight: "700",
-                  padding: "5px 20px",
+                  padding: "5px 0px",
                   backgroundColor: "transparent",
                   border: "1px solid #789D7C",
                   color: "#789D7C",
                 }}
                 className="text-[24px] leading-[35px]"
               >
-                Twitter
+                <a
+                  style={{
+                    padding: "12px 24px",
+                  }}
+                  target="_blank"
+                  className="hover:text-[#789D7C]"
+                  href="https://twitter.com/linea_erc404"
+                >
+                  {" "}
+                  Twitter
+                </a>
               </button>
             </div>
           </div>

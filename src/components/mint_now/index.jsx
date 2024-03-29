@@ -10,7 +10,7 @@ const MintNow = () => {
       title: "Mint NFT",
       img: Pic1,
       content:
-        "As an early contributor, users will have the privilege of gaining access to our exclusive collection of OG NFTs. Additionally, Dino404 will soon be launching an extraordinary initiative that allows users to participate in the free NFT minting process to acquire unique dinosaur eggs.",
+        "DINO404 will soon launch an exciting initiative where users can mint unique dinosaur eggs, unlocking immersive experiences and opportunities to explore the world of the DINO404 game.",
     },
     {
       title: "Play to earn",
@@ -46,7 +46,7 @@ const MintNow = () => {
           <div className="flex-1">
             {listItem.map((item, index) => (
               <div
-                className="h-[175px] w-full relative"
+                className="h-[180px] w-full relative"
                 style={{
                   border: "0.5px solid #8eb1ff6b",
                   background: `${
@@ -63,13 +63,13 @@ const MintNow = () => {
                   }}
                   className="absolute inset-0 flex justify-center items-center flex-col"
                 >
-                  <div className="px-10">
-                    <h4 className="text-[#789D7C] text-[24px] leading-8 font-bold">
+                  <div className={`px-10`}>
+                    <h4 className="text-[#789D7C] text-[24px] leading-8 font-bold pb-2">
                       {item.title}
                     </h4>
-                    <p className="text-[20px] leading-6 text-white/80 mt-1">
+                    <span className="text-[19px] leading-6 text-white/80 mt-1">
                       {item.content}
-                    </p>
+                    </span>
                   </div>
                 </div>
               </div>

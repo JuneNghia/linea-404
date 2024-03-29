@@ -89,23 +89,27 @@ const Footer = () => {
             <div className="h-[130px] relative">
               <div className="absolute bottom-4 left-0">
                 <div className="flex gap-2">
-                  <div
-                    className="h-[60px] w-[60px] flex justify-center items-center"
-                    style={{
-                      background: "rgba(255, 255, 255, 0.1)",
-                    }}
-                  >
-                    <img src={Twitter} />
-                  </div>
+                  <a target="_blank" href="https://twitter.com/linea_erc404">
+                    <div
+                      className="h-[60px] w-[60px] flex justify-center items-center"
+                      style={{
+                        background: "rgba(255, 255, 255, 0.1)",
+                      }}
+                    >
+                      <img src={Twitter} />
+                    </div>
+                  </a>
 
-                  <div
-                    className="h-[60px] w-[60px] flex justify-center items-center"
-                    style={{
-                      background: "rgba(255, 255, 255, 0.1)",
-                    }}
-                  >
-                    <img src={Discord} />
-                  </div>
+                  <a target="_blank" href="https://discord.gg/YFvNXUXE">
+                    <div
+                      className="h-[60px] w-[60px] flex justify-center items-center"
+                      style={{
+                        background: "rgba(255, 255, 255, 0.1)",
+                      }}
+                    >
+                      <img src={Discord} />
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
