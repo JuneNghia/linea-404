@@ -1,580 +1,182 @@
-import Line from "../../assets/roadmap/alien_planets.png";
-import Egg1 from "../../assets/roadmap/egg_1.png";
-import Egg2 from "../../assets/roadmap/egg_2.png";
+import Egg2 from "../../assets/roadmap/trungg 1.png";
 import Egg3 from "../../assets/roadmap/egg_3.png";
 import Egg4 from "../../assets/roadmap/egg_4.png";
-import bg from "../../assets/mint-now/bg.png"
 
-const RoadMap = () => {
+const Roadmap = () => {
+  const data = [
+    {
+      label: "Phase 1",
+      content: [
+        "Launch OG NFT Collection",
+        "The team plans to expand the virtual world, introducing new environments, quests, and challenges for players to explore",
+      ],
+      img: Egg3,
+      bgColor:
+        "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+      color: "#C32B12",
+    },
+    {
+      label: "Phase 2",
+      content: [
+        "Free Mint unique dinosaur eggs",
+        "Blockchain Game version 1 (basic features)",
+        "Activity for top leaderboard",
+        "The point-earning mechanism",
+      ],
+      img: Egg2,
+      bgColor:
+        "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+      color: "#8ED24E",
+    },
+    {
+      label: "Phase 3",
+      content: [
+        "Blockchain Game version 2 (upgraded features)",
+        "Airdrop for Community",
+        "Launch token $DINO",
+        "Listed on Cex/ Dex",
+      ],
+      img: Egg3,
+      bgColor:
+        "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+      color: "#EC811F",
+    },
+    {
+      label: "Phase 4",
+      content: [
+        "The token-earning mechanism",
+        "Integrating Metaverse into the game",
+      ],
+      img: Egg4,
+      bgColor:
+        "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+      color: "#D8299B",
+    },
+  ];
   return (
-    <div
-      className="w-full h-full lg:pb-[240px] pt-44 px-0 xl:px-6 2xl:px-0"
-      style={{
-        backgroundImage: `url(${bg})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "top",
-        backgroundSize: "cover",
-      }}
-    >
-      <div
-        className="lg:max-w-7xl mx-auto px-4 lg:px-0 py-10 pt-10 pb-32"
-      >
-        <div className="text-center space-y-[8px]">
-          <span
-            style={{ fontWeight: "800", lineHeight: "28px" }}
-            className="text-[#FAB2F1] text-[20px]"
-          >
-            FEATURED
-          </span>
-          <h4
-            style={{ lineHeight: "64px", fontWeight: "800" }}
-            className="text-[#FFFFFF] text-[58px]"
-          >
-            Roadmap
-          </h4>
-        </div>
-        <div className="hidden lg:inline-block">
-          <div className="relative text-[#B9BDD1] h-[500px] py-20">
+    <div className="w-full h-full">
+      <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto relative">
+        <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
+          Roadmap
+        </h4>
+        <div className="absolute left-0 top-[175px] right-0 flex justify-between z-10 opacity-60">
+          <div className="w-[275px]">
             <div
+              className=" w-[90%] mx-auto h-[280px] "
               style={{
-                background: "linear-gradient(0, #000, #fff)",
-                borderRadius: "20px",
+                backgroundColor: "rgba(184, 32, 11, 1)",
+                marginTop: "72px",
+                filter: "blur(150px)",
               }}
-              className="relative h-[228px] min-w-[300px] w-[25%]"
-            >
-              <div
-                style={{ borderRadius: "18px" }}
-                className="absolute bg-black w-[99%] h-[98%] left-[1.5px] top-[2.5px]"
-              >
-                <div className="w-[92%] m-auto bg-black">
-                  <p
-                    style={{
-                      fontWeight: "800",
-                      lineHeight: "36px",
-                      borderRadius: "8px",
-                    }}
-                    className="bg-[#762AC2] text-[#FFFFFF] text-[24px] text-center mt-[12px] opacity-90 hover:opacity-100 transition-all active:opacity-80"
-                  >
-                    Phase 1
-                  </p>
+            />
+          </div>
 
-                  <div className="pt-1.5 text-[#B9BDD1]">
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Launch OG NFT Collection
-                    </p>
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - The team plans to expand the virtual world, introducing
-                      new environments, quests, and challenges for players to
-                      explore
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <img
-                style={{ transform: "translate(-50%)" }}
-                className="absolute top-[88%] left-[50%] z-10"
-                src={Egg1}
-                alt="egg1"
-              />
-            </div>
-
+          <div className="w-[275px]">
             <div
+              className=" w-[90%] mx-auto h-[280px] "
               style={{
-                background: "linear-gradient(0, #000, #fff)",
-                borderRadius: "20px",
+                backgroundColor: "rgba(66, 135, 37, 1)",
+                marginTop: "72px",
+                filter: "blur(150px)",
               }}
-              className="absolute left-[calc(21%)] -bottom-[215px] h-[228px] min-w-[300px] w-[25%]"
-            >
-              <div
-                style={{ borderRadius: "18px" }}
-                className="absolute bg-black w-[99%] h-[98%] left-[1.5px] top-[2.5px]"
-              >
-                <div className="w-[92%] m-auto bg-black">
-                  <p
-                    style={{
-                      fontWeight: "800",
-                      lineHeight: "36px",
-                      borderRadius: "8px",
-                    }}
-                    className="bg-[#3C7C24] text-[#FFFFFF] text-[24px] text-center mt-[12px] opacity-90 hover:opacity-100 transition-all active:opacity-80"
-                  >
-                    Phase 2
-                  </p>
+            />
+          </div>
 
-                  <div className="pt-1.5 text-[#B9BDD1]">
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Free Mint unique dinosaur eggs
-                    </p>
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Blockchain Game version 1 (basic features)
-                    </p>
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Activity for top leaderboard
-                    </p>
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - The point-earning mechanism
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <img
-                style={{ transform: "translate(-50%)" }}
-                className="absolute -top-[170px] left-[50%] z-10"
-                src={Egg2}
-                alt="egg1"
-              />
-            </div>
-
+          <div className="w-[275px]">
             <div
+              className=" w-[90%] mx-auto h-[280px] "
               style={{
-                background: "linear-gradient(0, #000, #fff)",
-                borderRadius: "20px",
+                backgroundColor: "rgba(239, 140, 32, 1)",
+                marginTop: "72px",
+                filter: "blur(150px)",
               }}
-              className="absolute right-[27.5%] top-[200px] h-[228px] min-w-[300px] w-[25%]"
-            >
-              <div
-                style={{ borderRadius: "18px" }}
-                className="absolute bg-black w-[99%] h-[98%] left-[1.5px] top-[2.5px]"
-              >
-                <div className="w-[92%] m-auto bg-black">
-                  <p
-                    style={{
-                      fontWeight: "800",
-                      lineHeight: "36px",
-                      borderRadius: "8px",
-                    }}
-                    className="bg-[#F19121] text-[#FFFFFF] text-[24px] text-center mt-[12px] opacity-90 hover:opacity-100 transition-all active:opacity-80"
-                  >
-                    Phase 3
-                  </p>
+            />
+          </div>
 
-                  <div className="pt-1.5 text-[#B9BDD1]">
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Blockchain Game version 2 (upgraded features)
-                    </p>
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Airdrop for Community
-                    </p>
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Launch token $DINO
-                    </p>
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Listed on Cex/Dex
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <img
-                style={{ transform: "translate(-50%)" }}
-                className="absolute top-[90%] left-[50%] z-10"
-                src={Egg3}
-                alt="egg1"
-              />
-            </div>
-
+          <div className="w-[275px]">
             <div
+              className=" w-[90%] mx-auto h-[280px] "
               style={{
-                background: "linear-gradient(0, #000, #fff)",
-                borderRadius: "20px",
+                backgroundColor: "rgba(194, 29, 116, 1)",
+                marginTop: "72px",
+                filter: "blur(150px)",
               }}
-              className="absolute right-0 bottom-[-170px] h-[164px] min-w-[300px] w-[25%]"
-            >
-              <div
-                style={{ borderRadius: "18px" }}
-                className="absolute bg-black w-[99%] h-[98%] left-[1.5px] top-[2.5px]"
-              >
-                <div className="w-[92%] m-auto bg-black">
-                  <p
-                    style={{
-                      fontWeight: "800",
-                      lineHeight: "36px",
-                      borderRadius: "8px",
-                    }}
-                    className="bg-[#F440BC] text-[#FFFFFF] text-[24px] text-center mt-[12px] opacity-90 hover:opacity-100 transition-all active:opacity-80"
-                  >
-                    Phase 4
-                  </p>
-
-                  <div className="pt-1.5 text-[#B9BDD1]">
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - The token-earning mechanism
-                    </p>
-                    <p
-                      style={{
-                        letterSpacing: "-0.005em",
-                        fontSize: "18px",
-                        fontWeight: "400",
-                        lineHeight: "32px",
-                      }}
-                    >
-                      - Integrating Metaverse into the game
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <img
-                style={{ transform: "translate(-50%)" }}
-                className="absolute -top-[176px] left-[50%] z-10"
-                src={Egg4}
-                alt="egg1"
-              />
-            </div>
-
-            <div className="mt-[64px]">
-              <div className="h-[167px] w-full relative">
-                <img src={Line} alt="line" />
-              </div>
-            </div>
+            />
           </div>
         </div>
 
-        <div className="lg:hidden py-10">
-          <div className="roadmap flex flex-col gap-y-20">
-            <div className="flex">
-              <div className="flex-1 mx-auto flex justify-center items-center">
-                <img className="" src={Egg1} alt="egg1" />
-              </div>
-
-              <div
-                style={{
-                  background: "linear-gradient(0, #000, #fff)",
-                  borderRadius: "20px",
-                }}
-                className="relative h-[265px] w-[60%]"
-              >
+        <div className="flex justify-between my-32 relative z-0">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                background: "linear-gradient(0, #171717, #bfbcbc)",
+                borderRadius: "38px",
+                marginTop: `${(index === 0 || index === 3) && "72px"}`,
+              }}
+              className="relative  w-[290px] h-[362px]"
+            >
+              <div className="absolute w-[275px] h-[362px] left-0 right-0 top-2 mx-auto">
                 <div
-                  style={{ borderRadius: "18px" }}
-                  className="absolute bg-black w-[99%] h-[98%] left-[1.5px] top-[2.5px]"
+                  style={{ borderRadius: "38px" }}
+                  className="bg-black w-full h-full relative"
                 >
-                  <div className="w-[92%] m-auto bg-black">
-                    <p
+                  {index === 1 ? (
+                    <div
                       style={{
-                        fontWeight: "800",
-                        lineHeight: "36px",
-                        borderRadius: "8px",
+                        left: "50%",
+                        transform: "translateX(-50%)",
                       }}
-                      className="bg-[#762AC2] text-[#FFFFFF] text-[20px] text-center mt-[12px] opacity-90 hover:opacity-100 transition-all active:opacity-80"
+                      className="h-[257px] w-[240px] absolute -top-[132px]"
                     >
-                      Phase 1
-                    </p>
-
-                    <div className="pt-1.5 text-[#B9BDD1]">
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "16px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Launch OG NFT Collection
-                      </p>
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "16px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - The team plans to expand the virtual world,
-                        introducing new environments, quests, and challenges for
-                        players to explore
-                      </p>
+                      <img
+                        className="w-full h-full object-cover"
+                        src={item.img}
+                        alt="gameplay"
+                      />
                     </div>
+                  ) : (
+                    <div
+                      style={{
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                      }}
+                      className="h-[169px] w-[152px] absolute -top-[90px]"
+                    >
+                      <img
+                        className="w-full h-full object-cover"
+                        src={item.img}
+                        alt="gameplay"
+                      />
+                    </div>
+                  )}
+
+                  <div
+                    style={{
+                      background: item.color,
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      borderRadius: "12px",
+                      fontWeight: "700",
+                    }}
+                    className="absolute top-12 left-0 right-0 text-center text-[20px] px-3"
+                  >
+                    {item.label}
+                  </div>
+
+                  <div className="pt-28 w-[90%] mx-auto leading-[30px] text-[16px]">
+                    {item.content.map((content, index) => (
+                      <div key={index}>- {content}</div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className="flex">
-              <div
-                style={{
-                  background: "linear-gradient(0, #000, #fff)",
-                  borderRadius: "20px",
-                }}
-                className="relative h-[290px] w-[60%]"
-              >
-                <div
-                  style={{ borderRadius: "18px" }}
-                  className="absolute bg-black w-[99%] h-[98%] left-[1.5px] top-[2.5px]"
-                >
-                  <div className="w-[92%] m-auto bg-black">
-                    <p
-                      style={{
-                        fontWeight: "800",
-                        lineHeight: "36px",
-                        borderRadius: "8px",
-                      }}
-                      className="bg-[#3C7C24] text-[#FFFFFF] text-[20px] text-center mt-[12px] opacity-90 hover:opacity-100 transition-all active:opacity-80"
-                    >
-                      Phase 2
-                    </p>
-
-                    <div className="pt-1.5 text-[#B9BDD1]">
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "16px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Free Mint unique dinosaur eggs
-                      </p>
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "16px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Blockchain Game version 1 (basic features)
-                      </p>
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "16px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Activity for top leaderboard
-                      </p>
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "16px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - The point-earning mechanism
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex-1 mx-auto flex justify-center items-center">
-                <img className=" " src={Egg2} alt="egg1" />
-              </div>
-            </div>
-
-            <div className="flex">
-              <div className="flex-1 mx-auto flex justify-center items-center">
-                <img className="" src={Egg3} alt="egg1" />
-              </div>
-              <div
-                style={{
-                  background: "linear-gradient(0, #000, #fff)",
-                  borderRadius: "20px",
-                }}
-                className="relative h-[230px] w-[60%]"
-              >
-                <div
-                  style={{ borderRadius: "18px" }}
-                  className="absolute bg-black w-[99%] h-[98%] left-[1.5px] top-[2.5px]"
-                >
-                  <div className="w-[92%] m-auto bg-black">
-                    <p
-                      style={{
-                        fontWeight: "800",
-                        lineHeight: "36px",
-                        borderRadius: "8px",
-                      }}
-                      className="bg-[#F19121] text-[#FFFFFF] text-[20px] text-center mt-[12px] opacity-90 hover:opacity-100 transition-all active:opacity-80"
-                    >
-                      Phase 3
-                    </p>
-
-                    <div className="pt-1.5 text-[#B9BDD1]">
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "18px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Blockchain Game version 2 (upgraded features)
-                      </p>
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "18px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Airdrop for Community
-                      </p>
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "18px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Launch token $DINO
-                      </p>
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "18px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Listed on Cex/Dex
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex">
-              <div
-                style={{
-                  background: "linear-gradient(0, #000, #fff)",
-                  borderRadius: "20px",
-                }}
-                className="relative h-[228px] w-[60%]"
-              >
-                <div
-                  style={{ borderRadius: "18px" }}
-                  className="absolute bg-black w-[99%] h-[98%] left-[1.5px] top-[2.5px]"
-                >
-                  <div className="w-[92%] m-auto bg-black">
-                    <p
-                      style={{
-                        fontWeight: "800",
-                        lineHeight: "36px",
-                        borderRadius: "8px",
-                      }}
-                      className="bg-[#F440BC] text-[#FFFFFF] text-[20px] text-center mt-[12px] opacity-90 hover:opacity-100 transition-all active:opacity-80"
-                    >
-                      Phase 4
-                    </p>
-
-                    <div className="pt-1.5 text-[#B9BDD1]">
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "18px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - The token-earning mechanism
-                      </p>
-                      <p
-                        style={{
-                          letterSpacing: "-0.005em",
-                          fontSize: "18px",
-                          fontWeight: "400",
-                          lineHeight: "32px",
-                        }}
-                      >
-                        - Integrating Metaverse into the game
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex-1 mx-auto flex justify-center items-center">
-                <img className="" src={Egg4} alt="egg1" />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default RoadMap;
+export default Roadmap;
