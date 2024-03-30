@@ -27,26 +27,35 @@ const MintNow = () => {
   ];
 
   return (
-    <div className="w-full h-full relative mb-20 mt-40">
+    <div className="w-full h-full relative mb-0 lg:mb-20 mt-16 lg:mt-40">
       <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto relative z-10">
-        <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
+        <h4
+          style={{ fontWeight: "900" }}
+          className=" text-[42px] xl:text-[75px] leading-[35px] text-center"
+        >
           Mint Now
         </h4>
 
-        <div className="flex py-20">
-          <div className="w-[38%] relative">
+        <div className="flex py-20 lg:flex-row flex-col">
+          <div className="lg:w-[38%] w-[80%] mx-auto relative">
             <div className="h-full flex justify-center items-center">
-              <img src={BgLeft} alt="bg" />
+              <img className="" src={BgLeft} alt="bg" />
             </div>
-            <div className="absolute h-[536px] w-[552px] top-[10%] -left-10">
-              <img className="h-full w-full" src={Pach} alt="bg" />
+            <div className="absolute h-[536px] w-[552px] top-[5%] lg:top-[10%] -left-10">
+              <img
+                className="h-[400px] w-[380px] lg:h-full lg:w-full"
+                src={Pach}
+                alt="bg"
+              />
             </div>
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 pt-12 lg:pt-0">
             {listItem.map((item, index) => (
               <div
-                className="h-[180px] w-full relative"
+                className={`lg:h-[180px] ${
+                  index === 2 ? "h-[130px]" : "h-[200px]"
+                }  w-full relative`}
                 style={{
                   border: "0.5px solid #8eb1ff6b",
                   background: `${
@@ -63,11 +72,11 @@ const MintNow = () => {
                   }}
                   className="absolute inset-0 flex justify-center items-center flex-col"
                 >
-                  <div className={`px-10`}>
-                    <h4 className="text-[#789D7C] text-[24px] leading-8 font-bold pb-2">
+                  <div className={`px-5 lg:px-10`}>
+                    <h4 className="text-[#789D7C] text-[20px] lg:text-[24px] leading-8 font-bold lg:pb-2">
                       {item.title}
                     </h4>
-                    <span className="text-[19px] leading-6 text-white/80 mt-1">
+                    <span className="text-[13px] lg:text-[19px] leading-[19px] lg:leading-6 text-white/80 lg:mt-1">
                       {item.content}
                     </span>
                   </div>

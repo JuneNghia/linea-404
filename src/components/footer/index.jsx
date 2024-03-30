@@ -29,9 +29,31 @@ const Footer = () => {
     },
   ];
 
+  const listInfoMB = [
+    {
+      title: "Whitepaper",
+    },
+    {
+      title: "News & Updates",
+    },
+    {
+      title: "Terms of Use",
+    },
+
+    {
+      title: "Our Partners",
+    },
+    {
+      title: "Launch contribution",
+    },
+    {
+      title: "Tokenomics & allocation",
+    },
+  ];
+
   return (
-    <div className="mt-20">
-      <div className="lg:max-w-7xl mx-auto px-4 lg:px-0">
+    <div className="mt-10 lg:mt-20">
+      <div className="lg:block hidden lg:max-w-7xl mx-auto px-4 lg:px-0">
         <div className="flex justify-between">
           <div className="">
             <div className="h-[130px] w-[339px] relative">
@@ -128,16 +150,108 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-[#999999]/60 h-[1px] w-full my-10" />
+      <div className="lg:hidden">
+        <img
+          className="h-[99px] w-[239px] object-cover mx-auto"
+          src={Logo}
+          alt=""
+        />
+
+        <div
+          style={{
+            color: "rgba(255, 255, 255, 0.6)",
+          }}
+          className="flex gap-4 justify-center"
+        >
+          {listInfoMB.slice(0, 3).map((item, index) => (
+            <div
+              className="leading-[33px]"
+              style={{
+                fontSize: "14px",
+              }}
+              key={index}
+            >
+              {item.title}
+            </div>
+          ))}
+        </div>
+        <div
+          style={{
+            color: "rgba(255, 255, 255, 0.6)",
+          }}
+          className="flex gap-4 justify-center"
+        >
+          {listInfoMB.slice(3, 5).map((item, index) => (
+            <div
+              className="leading-[33px]"
+              style={{
+                fontSize: "14px",
+              }}
+              key={index}
+            >
+              {item.title}
+            </div>
+          ))}
+        </div>
+        <div
+          style={{
+            color: "rgba(255, 255, 255, 0.6)",
+          }}
+          className="flex gap-4 justify-center"
+        >
+          {listInfoMB.slice(5, 6).map((item, index) => (
+            <div
+              className="leading-[33px]"
+              style={{
+                fontSize: "14px",
+              }}
+              key={index}
+            >
+              {item.title}
+            </div>
+          ))}
+        </div>
+
+        <div className="flex gap-2 justify-center pt-4">
+          <a target="_blank" href="https://twitter.com/linea_erc404">
+            <div
+              className="h-[51px] w-[51px] flex justify-center items-center"
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+              }}
+            >
+              <img className="h-[20px] w-[20px]" src={Twitter} />
+            </div>
+          </a>
+
+          <a target="_blank" href="https://discord.gg/YFvNXUXE">
+            <div
+              className="h-[51px] w-[51px] flex justify-center items-center"
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+              }}
+            >
+              <img className="h-[20px] w-[20px]" src={Discord} />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div className="bg-[#999999]/60 h-[1px] w-full my-6 lg:my-10" />
 
       <div className="lg:max-w-7xl mx-auto px-4 lg:px-0 pb-10">
-        <div className="text-[16px] leading-[33px] text-[#FFFFFF]/70 flex items-center">
-          Build on <img className="pb-2.5 pl-1.5" src={Site} alt="" />
+        <div className="lg:text-[16px] text-[9px] justify-center lg:justify-start leading-[33px] text-[#FFFFFF]/70 flex items-center">
+          Build on{" "}
+          <img
+            className="h-[23px] lg:h-[42px] lg:w-[122px] w-[69px] pb-2 lg:pb-3.5 pl-1.5"
+            src={Site}
+            alt=""
+          />
           <span
             style={{
               fontWeight: "700",
             }}
-            className="flex items-center relative pl-6 font"
+            className="flex items-center relative pl-6 font text-[9px]"
           >
             <div className="absolute left-2 bottom-[9.5px] h-[12px] w-[12px]">
               <img className="h-full w-full" src={iconC} alt="iconC" />

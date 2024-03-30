@@ -55,7 +55,7 @@ const Roadmap = () => {
   ];
   return (
     <div className="w-full h-full">
-      <div className="lg:max-w-7xl px-4 lg:px-0 mx-auto relative">
+      <div className="hidden lg:block lg:max-w-7xl px-4 lg:px-0 mx-auto relative">
         <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
           Roadmap
         </h4>
@@ -168,6 +168,99 @@ const Roadmap = () => {
                     {item.content.map((content, index) => (
                       <div key={index}>- {content}</div>
                     ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="lg:hidden">
+        <h4
+          style={{
+            fontWeight: "900",
+          }}
+          className="font-bold text-[42px] xl:text-[75px] leading-[35px] text-center"
+        >
+          Roadmap
+        </h4>
+
+        <div className="flex flex-col gap-6 relative z-0 pt-16">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className={`relative w-full ${
+                index === 2
+                  ? "h-[190px]"
+                  : index === 3
+                  ? "h-[145px]"
+                  : "h-[180px]"
+              } my-2`}
+            >
+              <div
+                style={{
+                  borderRadius: "16px",
+                  background: "linear-gradient(0, #171717, #bfbcbc)",
+                }}
+                className="h-[98%] w-[90%] m-auto relative"
+              >
+                <div className="absolute inset-0 w-[98%] h-[99%] top-1.5 m-auto">
+                  <div
+                    style={{ borderRadius: "16px" }}
+                    className="bg-black w-full h-full relative"
+                  >
+                    <div
+                      className={`absolute ${
+                        index === 1
+                          ? "-left-[12px] -top-[82px]"
+                          : "-top-[55px] left-[30px]"
+                      } `}
+                    >
+                      <img
+                        className={` ${
+                          index === 1
+                            ? "w-[185px] h-[166px]"
+                            : "w-[102px]  h-[113px]"
+                        } object-cover`}
+                        src={item.img}
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      style={{ borderRadius: "16px" }}
+                      className="absolute inset-0 h-full w-full overflow-hidden"
+                    >
+                      <div
+                        style={{
+                          filter: `blur(150px)`,
+                          background: `${item.color}`,
+                        }}
+                        className="absolute inset-0 h-[180px] w-[300px] opacity-60"
+                      />
+                      <div className="px-4 pt-9">
+                        <div
+                          style={{
+                            background: item.color,
+                            fontWeight: "700",
+                            borderRadius: "8px",
+                          }}
+                          className="text-[16px] leading-[33px] w-[128px] flex justify-center items-center  h-[24px]"
+                        >
+                          {item.label}
+                        </div>
+                        <div className="pt-5">
+                          {item.content.map((content, index) => (
+                            <div
+                              key={index}
+                              className="text-white/80 text-[14px] leading-[19px]"
+                            >
+                              - {content}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

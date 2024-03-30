@@ -19,7 +19,7 @@ function App() {
           <Intro />
         </div>
 
-        <div className="mt-40">
+         <div className="lg:mt-40 mt-20">
           <GetDino />
         </div>
 
@@ -33,7 +33,7 @@ function App() {
           <Marketplace />
         </div>
 
-        <div id="game_play" className="mt-40">
+        <div id="game_play" className="lg:mt-40 mt-28">
           <GamePlay />
         </div>
 
@@ -46,11 +46,11 @@ function App() {
         </div>
         <div id="join_us">
           <JoinUs />
-        </div>
+        </div> 
 
         <div id="footer">
           <Footer />
-        </div>
+        </div> 
       </div>
     </>
   );

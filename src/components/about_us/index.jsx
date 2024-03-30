@@ -8,17 +8,29 @@ const AboutUs = () => {
     <div className="relative">
       <div className="max-w-7xl mx-auto px-4 lg:px-0 relative z-50">
         <div className="flex flex-col-reverse items-center lg:grid lg:grid-cols-2 lg:gap-[26px] h-[80%] sm:h-[98%] lg:h-[80%] xl:h-[85%]">
-          <div>
+          <div className="hidden lg:block">
             <img style={{ borderRadius: "10px" }} src={aboutUsImg} />
           </div>
+
           <div>
-            <h2 className="title mb-[40px]">About Us</h2>
-            <p
+            <h2 className="title mb-[40px] hidden lg:block">About Us</h2>
+            <h2
               style={{
-                fontSize: "18px",
-                lineHeight: "23px",
+                fontWeight: "900",
               }}
-              className="!text-white font-mulish"
+              className="text-[42px] lg:hidden text-center"
+            >
+              About Us
+            </h2>
+            <div className="lg:hidden">
+              <img
+                className="h-[258px] w-[258px] mx-auto"
+                style={{ borderRadius: "10px" }}
+                src={aboutUsImg}
+              />
+            </div>
+            <p
+              className={`!text-white text-center lg:text-start font-mulish text-[14px] lg:text-[18px] leading-[19px] lg:leading-[23px]`}
             >
               Discover a captivating world where dinosaurs have evolved over
               thousands of years in our blockchain game project on Linea. Engage
@@ -27,11 +39,7 @@ const AboutUs = () => {
             </p>
             <br />
             <p
-              style={{
-                fontSize: "18px",
-                lineHeight: "23px",
-              }}
-              className="!text-white font-mulish"
+              className={`!text-white text-center lg:text-start font-mulish text-[14px] lg:text-[18px] leading-[19px] lg:leading-[23px]`}
             >
               Powered by the secure and transparent Linea ecosystem and
               leveraging the cutting-edge features of ERC404 technology, DINO404
@@ -41,21 +49,14 @@ const AboutUs = () => {
               authentic and captivating gaming experience.
             </p>
 
-            <div className="flex gap-[10px] mt-6">
+            <div className="flex gap-[10px] lg:mt-6 mt-4 justify-center lg:justify-start">
               <button
-                style={{
-                  padding: "6px 24px",
-                }}
                 onClick={() => setPopupMinting(!popupMinting)}
+                className="text-[16px] lg:text-[24px] py-0.5 px-4 lg:px-6 lg:py-1.5 rounded-[12px] lg:rounded-[20px]"
               >
                 Minting
               </button>
-              <button
-                style={{
-                  padding: "6px 24px",
-                }}
-                className=" !bg-transparent text-[#789D7C] border border-[#789D7C]"
-              >
+              <button className="rounded-[12px] lg:rounded-[20px] !bg-transparent text-[#789D7C] border border-[#789D7C] text-[16px] lg:text-[24px] py-0.5 px-4 lg:px-6 lg:py-1.5">
                 Contact Us
               </button>
             </div>
@@ -68,7 +69,7 @@ const AboutUs = () => {
           background: "#EB31A5",
           filter: "blur(150px)",
         }}
-        className="h-[439px] w-[439px] absolute top-[170px] opacity-30 -right-[100px]"
+        className="lg:h-[439px] h-[200px] w-[200px] lg:w-[439px] absolute top-[170px] opacity-30 right-0 lg:-right-[100px]"
       />
 
       <div
@@ -76,7 +77,7 @@ const AboutUs = () => {
           background: "#8657CC",
           filter: "blur(150px)",
         }}
-        className="h-[371px] w-[541px] absolute top-[170px] opacity-30 left-[200px]"
+        className="lg:h-[371px] h-[200px] w-[200px] lg:w-[541px] absolute top-[170px] opacity-50 left-[-50px] lg:left-[200px]"
       />
 
       <div

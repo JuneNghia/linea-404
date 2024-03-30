@@ -154,6 +154,70 @@ const data = [
   },
 ];
 
+const dataMobile = [
+  {
+    name: "Spinosaurus",
+    image: pic6,
+    bg: "BE5A35",
+  },
+  {
+    name: "Indominus rex",
+    image: pic3,
+    bg: "704CB3",
+  },
+  {
+    name: "Mosasaurus",
+    image: pic7,
+    bg: "E19242",
+  },
+
+  {
+    name: "Triceratops",
+    image: pic1,
+    bg: "4E6F73",
+  },
+  {
+    name: "Ankylosaurus",
+    image: pic9,
+    bg: "6AAFC3",
+  },
+  {
+    name: "Dimorphodon",
+    image: pic11,
+    bg: "E19242",
+  },
+  {
+    name: "Baryonyx",
+    image: pic10,
+    bg: "95B0AE",
+  },
+  {
+    name: "Tylosaurus",
+    image: pic12,
+    bg: "4D535E",
+  },
+  {
+    name: "Pteranodon",
+    image: pic2,
+    bg: "BE5A35",
+  },
+  {
+    name: "Apatosaurus",
+    image: pic16,
+    bg: "4D535E",
+  },
+  {
+    name: "Ankylosaurus",
+    image: pic14,
+    bg: "AFA748",
+  },
+  {
+    name: "Triceratops",
+    image: pic1,
+    bg: "4E6F73",
+  },
+];
+
 const SliderCustom = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [popupMinting, setPopupMinting] = useState(false);
@@ -166,6 +230,58 @@ const SliderCustom = () => {
   };
   const previous = () => {
     sliderRef.slickPrev();
+  };
+
+  const settingsMobile = {
+    className: "center !pb-[50px]",
+    arrows: false,
+    dots: true,
+    dotsClass: "slick-dots slick-thumb",
+    centerPadding: "0",
+    infinite: false,
+    slidesToShow: 1,
+    speed: 500,
+    rows: 4,
+    slidesPerRow: 1,
+    appendDots: (dots) => (
+      <div
+        style={{
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        <ul style={{ margin: "0px" }}>
+          <li onClick={previous}>
+            <div
+              id="previous"
+              className={`flex items-center justify-center ${
+                dots[0].props.className !== "slick-active" && "text-[#789D7C]"
+              }`}
+            >
+              <div>
+                <i className="fa-solid fa-arrow-left"></i>
+              </div>
+            </div>
+          </li>
+          {dots}{" "}
+          <li onClick={next}>
+            <div
+              id="next"
+              className={`flex items-center justify-center ${
+                dots[2].props.className !== "slick-active" && "text-[#789D7C]"
+              }`}
+            >
+              <div>
+                <i className="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div className="flex items-center justify-center">{i + 1}</div>
+    ),
   };
 
   const settings = {
@@ -241,7 +357,7 @@ const SliderCustom = () => {
 
   return (
     <>
-      <div className="cursor-pointer">
+      <div className="cursor-pointer lg:block hidden">
         <Slider
           ref={(slider) => {
             sliderRef = slider;
@@ -535,6 +651,248 @@ const SliderCustom = () => {
                           <img
                             className="h-full w-full object-cover"
                             src={data[2]?.image}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+        {/* <Swiper
+          slidesPerView={10}
+          // pagination={pagination}
+          spaceBetween={30}
+          grid={{
+            rows: 2,
+          }}
+          // loop={true}
+          // centeredSlides={true}
+          speed={1200}
+          autoplay={{
+            delay: 2500,
+            pauseOnMouseEnter: true,
+          }}
+          navigation={true}
+          modules={[Navigation, Autoplay, Pagination]}
+        >
+          {data.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="border">
+                <div className="flex flex-col items-center">
+                  <span>{item.name}</span>
+                  <span className="flex gap-2">
+                    <img className="w-[13px] h-[20px]" src={ethImg} />
+                    <span>0.0018</span>
+                  </span>
+
+                  <img src={item.image} />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper> */}
+      </div>
+
+      <div className="cursor-pointer lg:hidden mt-8">
+        <Slider
+          ref={(slider) => {
+            sliderRef = slider;
+          }}
+          {...settingsMobile}
+        >
+          {dataMobile.map((item, index) => (
+            <div
+              style={{
+                height: "112.71px",
+              }}
+              key={index}
+              className="relative w-full h-[62px] my-2"
+            >
+              <div
+                style={{
+                  borderRadius: "16px",
+                  background: "linear-gradient(0, #171717, #bfbcbc)",
+                }}
+                className="h-[98%] w-[90%] m-auto relative"
+              >
+                <div className="absolute inset-0 w-[97%] h-[98%] top-1.5 m-auto">
+                  <div
+                    style={{ borderRadius: "16px" }}
+                    className="bg-black w-full h-full relative"
+                  >
+                    <div
+                      style={{ borderRadius: "16px" }}
+                      className="absolute inset-0 h-full w-full overflow-hidden"
+                    >
+                      <div
+                        style={{
+                          filter: `blur(150px)`,
+                          background: `#${item.bg}`,
+                        }}
+                        className="absolute inset-0 h-[258px] w-[378px] opacity-60"
+                      />
+                    </div>
+
+                    <div className="flex flex-col pl-24 pt-2">
+                      <div className="flex justify-between pr-5 items-center">
+                        <div>
+                          <span
+                            style={{
+                              fontWeight: "800",
+                              fontSize: "20px",
+                              fontStyle: "normal",
+                              lineHeight: "18px",
+                              letterSpacing: "-1px",
+                            }}
+                            className="font-mulish"
+                          >
+                            {item.name}
+                          </span>
+                          <span className="flex gap-1 items-center">
+                            <img className="w-[10px] h-[14px]" src={ethImg} />
+                            <span style={{ fontSize: "14px" }}>0.0018</span>
+                          </span>
+                        </div>
+
+                        <div
+                          style={{
+                            background: "rgba(120, 157, 124, 1)",
+                          }}
+                          className="h-[34.19px] w-[34.19px] flex justify-center items-center rounded-[12px]"
+                        >
+                          <i className="fa-solid fa-arrow-right"></i>
+                        </div>
+                      </div>
+
+                      {index === 0 && (
+                        <div className="absolute -top-[35px] -left-[25px] w-[103px] object-cover h-[103px] ">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[0]?.image}
+                          />
+                        </div>
+                      )}
+
+                      {index === 1 && (
+                        <div className="absolute h-[107px] w-[107px] -top-[30px] -left-[25px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[1]?.image}
+                          />
+                        </div>
+                      )}
+
+                      {index === 2 && (
+                        <div
+                          style={{
+                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                          }}
+                          className="absolute h-[113px] w-[113px] -top-[30px] -left-[25px]"
+                        >
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[2]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 3 && (
+                        <div className="absolute h-[101px] w-[100px] -top-[25px] -left-[25px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[3]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 4 && (
+                        <div className="absolute h-[112px] w-[110px] -top-[35px] -left-[25px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[4]?.image}
+                          />
+                        </div>
+                      )}
+
+                      {index === 5 && (
+                        <div
+                          style={{
+                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                          }}
+                          className="absolute h-[98px] w-[98px] -top-[25px] -left-[25px]"
+                        >
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[5]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 6 && (
+                        <div className="absolute h-[100px] w-[91px] -top-[25px] -left-[25px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[6]?.image}
+                          />
+                        </div>
+                      )}
+
+                      {index === 7 && (
+                        <div
+                          style={{
+                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                          }}
+                          className="absolute h-[100px] w-[100px] -top-[20px] -left-[28px]"
+                        >
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[7]?.image}
+                          />
+                        </div>
+                      )}
+
+                      {index === 8 && (
+                        <div
+                          style={{
+                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                          }}
+                          className="absolute h-[107px] w-[105px] -top-[25px] -left-[28px]"
+                        >
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[8]?.image}
+                          />
+                        </div>
+                      )}
+
+                      {index === 9 && (
+                        <div className="absolute h-[107px] w-[103px] -top-[25px] -left-[28px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[9]?.image}
+                          />
+                        </div>
+                      )}
+
+                      {index === 10 && (
+                        <div
+                          style={{
+                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                          }}
+                          className="absolute h-[109px] w-[109px] -top-[25px] -left-[28px]"
+                        >
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[10]?.image}
+                          />
+                        </div>
+                      )}
+
+                      {index === 11 && (
+                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[28px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[11]?.image}
                           />
                         </div>
                       )}

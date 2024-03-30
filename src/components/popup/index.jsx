@@ -36,9 +36,9 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
               }}
             >
               <div
+              className="lg:h-[678px] h-[620px] "
                 style={{
                   maxWidth: "636px",
-                  height: "678px",
                   width: "100%",
                   margin: "auto",
                   position: "relative",
@@ -69,8 +69,8 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                   </button>
                 </div>
                 <div
+                className="pt-[50px] pl-6 pr-6 lg:pl-[50px] lg:pr-[50px] pb-[30px]"
                   style={{
-                    padding: "50px 50px 30px 50px",
                     borderRadius: "10px",
                     opacity: "0.9",
                   }}
@@ -78,23 +78,22 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                   <h2
                     style={{
                       fontWeight: "900",
-                      fontSize: "36px",
                       letterSpacing: "-1px",
                     }}
-                    className="text-white text-[22px] text-center leading-[35px]"
+                    className="text-white text-[24px] lg:text-[36px] text-center leading-[35px]"
                   >
                     MINT YOUR NFT
                   </h2>
                   <div className="pt-7">
-                    <div className="relative h-[188px] w-full">
-                      <div className="w-[187px] h-[191px] absolute left-[145px] z-10">
+                    <div className="relative h-[130px] lg:h-[188px] w-full">
+                      <div className="lg:w-[187px] w-[109px] h-[113px] lg:h-[191px] absolute left-[70px] lg:left-[145px] z-10">
                         <div
                           className="flex justify-center items-center"
                           style={{
                             borderRadius: "8px",
                             transform: "rotate(-7.58deg)",
-                            width: "171.55px",
-                            height: "165.19px",
+                            width: "109px",
+                            height: "113px",
                             overflow: "hidden",
                           }}
                         >
@@ -136,8 +135,8 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                               borderRadius: "8px",
                               boxShadow:
                                 "inset 0px 0px 4px rgba(0, 0, 0, 0.25)",
-                              height: "136.15px",
-                              width: "146.13px",
+                              height: "96.1px",
+                              width: "89.5px",
                               position: "relative",
                               zIndex: 30,
                             }}
@@ -147,7 +146,7 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                         </div>
                       </div>
 
-                      <div className="w-[187px] h-[191px] absolute top-1.5 right-[95px] z-0">
+                      <div className="w-[100px] h-[103.6px] absolute top-1.5 right-[68px] lg:right-[95px] z-0">
                         <div
                           className="flex justify-center items-center"
                           style={{
@@ -156,8 +155,8 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                             backdropFilter: "blur(12px)",
                             borderRadius: "8px",
                             transform: "rotate(4.66deg)",
-                            width: "151.72px",
-                            height: "157.55px",
+                            width: "100px",
+                            height: "103.6px",
                           }}
                         >
                           <div
@@ -187,8 +186,8 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                               borderRadius: "8px",
                               boxShadow:
                                 "inset 0px 0px 4px rgba(0, 0, 0, 0.25)",
-                              width: "125.04px",
-                              height: "134.21px",
+                              width: "82.2px",
+                              height: "88.2px",
                               position: "relative",
                               zIndex: 20,
                             }}
@@ -208,10 +207,9 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                   <ul
                     style={{
                       fontWeight: "500",
-                      fontSize: "20px",
                       fontStyle: "normal",
                     }}
-                    className="text-white pb-8 space-y-4 leading-[35px]"
+                    className="text-white text-[16px] lg:text-[20px] pb-8 space-y-4 leading-[35px]"
                   >
                     <li className="flex justify-between">
                       <div>Total supply:</div>
@@ -239,9 +237,8 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                       padding: "12px 0px",
                       borderRadius: "20px",
                       lineHeight: "24px",
-                      fontSize: "20px",
                     }}
-                    className="bg-[#7C9B7C] text-white uppercase text-[18px] w-full flex justify-center items-center opacity-90 hover:opacity-100 border-none transition-all active:opacity-80 active:border-none"
+                    className="bg-[#7C9B7C] lg:text-[20px] text-white uppercase text-[16px] w-full flex justify-center items-center opacity-90 hover:opacity-100 border-none transition-all active:opacity-80 active:border-none"
                   >
                     Mint Now
                   </button>
