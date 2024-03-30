@@ -244,7 +244,7 @@ const Header = () => {
               <a
                 className="h-[36px] w-[36px]"
                 target="_blank"
-                href="https://discord.gg/YFvNXUXE"
+                href=""
               >
                 <div
                   style={{

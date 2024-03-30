@@ -122,7 +122,7 @@ const Footer = () => {
                     </div>
                   </a>
 
-                  <a target="_blank" href="https://discord.gg/YFvNXUXE">
+                  <a target="_blank" href="/">
                     <div
                       className="h-[60px] w-[60px] flex justify-center items-center"
                       style={{
@@ -224,7 +224,7 @@ const Footer = () => {
             </div>
           </a>
 
-          <a target="_blank" href="https://discord.gg/YFvNXUXE">
+          <a target="_blank" href="">
             <div
               className="h-[51px] w-[51px] flex justify-center items-center"
               style={{

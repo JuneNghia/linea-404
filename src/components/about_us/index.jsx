@@ -57,7 +57,17 @@ const AboutUs = () => {
                 Minting
               </button>
               <button className="rounded-[12px] lg:rounded-[20px] !bg-transparent text-[#789D7C] border border-[#789D7C] text-[16px] lg:text-[24px] py-0.5 px-4 lg:px-6 lg:py-1.5">
-                Contact Us
+              <a
+                  style={{
+                    padding: "12px 24px",
+                  }}
+                  target="_blank"
+                  className="hover:text-[#789D7C]"
+                  href="https://twitter.com/linea_erc404"
+                >
+                  
+                  Contact Us
+                </a>
               </button>
             </div>
           </div>

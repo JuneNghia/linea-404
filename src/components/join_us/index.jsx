@@ -72,7 +72,7 @@ const JoinUs = () => {
                     padding: "12px 24px",
                   }}
                   className="hover:text-white"
-                  href="https://discord.gg/YFvNXUXE"
+                  href="/"
                 >
                   Join Discord
                 </a>
@@ -177,7 +177,7 @@ const JoinUs = () => {
                     padding: "2px 12px",
                   }}
                   className="hover:text-white"
-                  href="https://discord.gg/YFvNXUXE"
+                  href="/"
                 >
                   Join Discord
                 </a>

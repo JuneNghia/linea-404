@@ -262,7 +262,7 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                     </div>
                   </a>
 
-                  <a target="_blank" href="https://discord.gg/YFvNXUXE">
+                  <a target="_blank" href="">
                     <div
                       style={{
                         background: "rgba(255, 255, 255, 0.1)",
