@@ -13,7 +13,9 @@ const Roadmap = () => {
       img: Egg3,
       bgColor:
         "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
-      color: "#C32B12",
+      color: "#B8200B",
+      widthBlur: "335px",
+      heightBlue: "270px"
     },
     {
       label: "Phase 2",
@@ -26,7 +28,9 @@ const Roadmap = () => {
       img: Egg2,
       bgColor:
         "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
-      color: "#8ED24E",
+      color: "#428725",
+      widthBlur: "280px",
+      heightBlue: "244px"
     },
     {
       label: "Phase 3",
@@ -39,7 +43,9 @@ const Roadmap = () => {
       img: Egg3,
       bgColor:
         "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
-      color: "#EC811F",
+      color: "#EF8C20",
+      widthBlur: "297px",
+      heightBlue: "270px"
     },
     {
       label: "Phase 4",
@@ -50,7 +56,9 @@ const Roadmap = () => {
       img: Egg4,
       bgColor:
         "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
-      color: "#D8299B",
+      color: "#C21D74",
+      widthBlur: "348px",
+      heightBlue: "269px"
     },
   ];
   return (
@@ -59,51 +67,7 @@ const Roadmap = () => {
         <h4 className="font-bold text-[36px] xl:text-[75px] leading-[35px] text-center">
           Roadmap
         </h4>
-        <div className="absolute left-0 top-[175px] right-0 flex justify-between z-10 opacity-60">
-          <div className="w-[275px]">
-            <div
-              className=" w-[90%] mx-auto h-[280px] "
-              style={{
-                backgroundColor: "rgba(184, 32, 11, 1)",
-                marginTop: "72px",
-                filter: "blur(150px)",
-              }}
-            />
-          </div>
-
-          <div className="w-[275px]">
-            <div
-              className=" w-[90%] mx-auto h-[280px] "
-              style={{
-                backgroundColor: "rgba(66, 135, 37, 1)",
-                marginTop: "72px",
-                filter: "blur(150px)",
-              }}
-            />
-          </div>
-
-          <div className="w-[275px]">
-            <div
-              className=" w-[90%] mx-auto h-[280px] "
-              style={{
-                backgroundColor: "rgba(239, 140, 32, 1)",
-                marginTop: "72px",
-                filter: "blur(150px)",
-              }}
-            />
-          </div>
-
-          <div className="w-[275px]">
-            <div
-              className=" w-[90%] mx-auto h-[280px] "
-              style={{
-                backgroundColor: "rgba(194, 29, 116, 1)",
-                marginTop: "72px",
-                filter: "blur(150px)",
-              }}
-            />
-          </div>
-        </div>
+       
 
         <div className="flex justify-between my-32 relative z-0">
           {data.map((item, index) => (
@@ -116,11 +80,49 @@ const Roadmap = () => {
               }}
               className="relative  w-[290px] h-[362px]"
             >
+                <div
+                className="absolute opacity-40"
+                style={{
+                  filter: `blur(150px)`,
+                  background: `${item.color}`,
+                  height: item.heightBlue,
+                  width: item.widthBlur,
+                  left: "50%",
+                  top: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              ></div>
               <div className="absolute w-[275px] h-[362px] left-0 right-0 top-2 mx-auto">
                 <div
                   style={{ borderRadius: "38px" }}
-                  className="bg-black w-full h-full relative"
+                  className="w-full h-[97.5%] relative"
                 >
+                      <div
+                      style={{ borderRadius: "38px" }}
+                      className="absolute inset-0 h-full w-full overflow-hidden z-0"
+                    >
+                      <div className="absolute inset-0 h-full w-full bg-black z-0" />
+                      <div
+                        style={{
+                          filter: `blur(150px)`,
+                          background: `${item.color}`,
+                          height: item.heightBlue,
+                          width: item.widthBlur,
+                          left: "50%",
+                          top: "50%",
+                          transform: "translate(-50%, -50%)",
+                        }}
+                        className="absolute inset-0 opacity-70 z-10"
+                      />
+                      <div
+                        style={{
+                          background:
+                            "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+                          borderRadius: "38px",
+                        }}
+                        className="absolute inset-0 h-full w-full z-20"
+                      />
+                    </div>
                   {index === 1 ? (
                     <div
                       style={{
@@ -153,7 +155,6 @@ const Roadmap = () => {
 
                   <div
                     style={{
-                      background: item.color,
                       left: "50%",
                       transform: "translateX(-50%)",
                       borderRadius: "12px",
@@ -164,7 +165,7 @@ const Roadmap = () => {
                     {item.label}
                   </div>
 
-                  <div className="pt-28 w-[90%] mx-auto leading-[30px] text-[16px]">
+                  <div className="pt-28 w-[90%] mx-auto leading-[30px] text-[16px] relative z-10">
                     {item.content.map((content, index) => (
                       <div key={index}>- {content}</div>
                     ))}

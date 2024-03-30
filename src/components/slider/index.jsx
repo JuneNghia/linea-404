@@ -464,7 +464,7 @@ const SliderCustom = () => {
                       />
                     </div>
 
-                    <div className="flex flex-col items-center pt-8">
+                    <div className="flex flex-col items-center pt-8 relative z-10">
                       <span
                         style={{
                           fontWeight: "900",
@@ -482,7 +482,10 @@ const SliderCustom = () => {
                         <span>0.0018</span>
                       </span>
 
-                      {index === 0 && (
+
+                    </div>
+
+                    {index === 0 && (
                         <div className="absolute -bottom-[56px] left-[-50px] w-[353px] object-cover h-[348px] ">
                           <img
                             className="h-full w-full object-cover"
@@ -492,7 +495,7 @@ const SliderCustom = () => {
                       )}
 
                       {index === 1 && (
-                        <div className="absolute h-[360px] w-[368px] -bottom-[60px]">
+                        <div className="absolute h-[360px] w-[368px] left-[-50px]  -bottom-[60px]">
                           <img
                             className="h-full w-full object-cover"
                             src={data[1]?.image}
@@ -727,7 +730,6 @@ const SliderCustom = () => {
                           />
                         </div>
                       )}
-                    </div>
                   </div>
                 </div>
               </div>
