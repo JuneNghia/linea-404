@@ -36,121 +36,169 @@ const data = [
     name: "Triceratops",
     image: pic1,
     bg: "4E6F73",
+    heightBlur: "258px",
+    widthBlur: "378px",
   },
   {
     name: "Pteranodon",
     image: pic2,
     bg: "BE5A35",
+    heightBlur: "238px",
+    widthBlur: "348px",
   },
   {
     name: "Indominus rex",
     image: pic3,
     bg: "704CB3",
+    heightBlur: "208px",
+    widthBlur: "304px",
   },
   {
     name: "Stegosaurus",
     image: pic4,
     bg: "961E18",
+    heightBlur: "208px",
+    widthBlur: "304px",
   },
   {
     name: "Velociraptor",
     image: pic5,
     bg: "4E6F73",
+    heightBlur: "258px",
+    widthBlur: "378px",
   },
   {
     name: "Spinosaurus",
     image: pic6,
     bg: "BE5A35",
+    heightBlur: "238px",
+    widthBlur: "348px",
   },
   {
     name: "Ankylosaurus",
     image: pic7,
     bg: "6AAFC3",
+    heightBlur: "181px",
+    widthBlur: "264px",
   },
   {
     name: "Pachycephalosaurus",
     image: pic8,
     bg: "A6AC7F",
+    heightBlur: "208px",
+    widthBlur: "304px",
   },
   {
     name: "Ankylosaurus",
     image: pic9,
     bg: "AFA748",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Baryonyx",
     image: pic10,
     bg: "95B0AE",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Dimorphodon",
     image: pic11,
     bg: "E19242",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Tylosaurus",
     image: pic12,
     bg: "4D535E",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Dilophosaurus",
     image: pic13,
     bg: "AFA748",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Ankylosaurus",
     image: pic14,
     bg: "95B0AE",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Mosasaurus",
     image: pic15,
     bg: "E19242",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Apatosaurus",
     image: pic16,
     bg: "4D535E",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Ankylosaurus",
     image: pic17,
     bg: "AFA748",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Dilophosaurus",
     image: pic18,
     bg: "95B0AE",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Mosasaurus",
     image: pic19,
     bg: "76B2C5",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Triceratops",
     image: pic20,
     bg: "4D535E",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Baryonyx",
     image: pic21,
     bg: "AFA748",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Ankylosaurus",
     image: pic22,
     bg: "95B0AE",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Spinosaurus",
     image: pic23,
     bg: "E19242",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
   {
     name: "Indominus",
     image: pic24,
     bg: "764CC0",
+    heightBlur: "204px",
+    widthBlur: "298px",
   },
 ];
 
@@ -285,7 +333,7 @@ const SliderCustom = () => {
   };
 
   const settings = {
-    className: "center !pb-[50px]",
+    className: "center ",
     arrows: false,
     dots: true,
     dotsClass: "slick-dots slick-thumb",
@@ -357,7 +405,7 @@ const SliderCustom = () => {
 
   return (
     <>
-      <div className="cursor-pointer lg:block hidden">
+      <div className="cursor-pointer lg:block hidden market">
         <Slider
           ref={(slider) => {
             sliderRef = slider;
@@ -365,7 +413,18 @@ const SliderCustom = () => {
           {...settings}
         >
           {data.map((item, index) => (
-            <div key={index} className="relative w-full h-[378px] my-14">
+            <div key={index} className="relative w-full h-[378px] my-10">
+                    <div
+                className={`absolute ${[1,2,5,6,9,10,13,14,17,18,21,22].includes(index) ? `h-[120px] w-[240px]` : ""}`}
+                style={{
+                  filter: `blur(150px)`,
+                  background: `#${item.bg}`,
+           
+                  left: "50%",
+                  top: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              ></div>
               <div
                 style={{
                   borderRadius: "38px",
@@ -376,18 +435,32 @@ const SliderCustom = () => {
                 <div className="absolute inset-0 w-[95%] h-[98%] top-1.5 m-auto">
                   <div
                     style={{ borderRadius: "38px" }}
-                    className="bg-black w-full h-full relative"
+                    className="w-full h-full relative"
                   >
-                    <div
+                       <div
                       style={{ borderRadius: "38px" }}
-                      className="absolute inset-0 h-full w-full overflow-hidden"
+                      className="absolute inset-0 h-full w-full overflow-hidden z-0"
                     >
+                      <div className="absolute inset-0 h-full w-full bg-black z-0" />
                       <div
                         style={{
                           filter: `blur(150px)`,
                           background: `#${item.bg}`,
+                          height: item.heightBlur,
+                          width: item.widthBlur,
+                          left: "50%",
+                          top: "50%",
+                          transform: "translate(-50%, -50%)",
                         }}
-                        className="absolute inset-0 h-[258px] w-[378px] opacity-70"
+                        className="absolute inset-0 opacity-100 z-10"
+                      />
+                      <div
+                        style={{
+                          background:
+                            "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+                          borderRadius: "38px",
+                        }}
+                        className="absolute inset-0 h-full w-full z-20"
                       />
                     </div>
 
@@ -711,6 +784,7 @@ const SliderCustom = () => {
               key={index}
               className="relative w-full h-[62px] my-2"
             >
+              
               <div
                 style={{
                   borderRadius: "16px",

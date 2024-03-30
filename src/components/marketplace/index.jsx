@@ -10,7 +10,7 @@ const Marketplace = () => {
             letterSpacing: "-1px",
             fontWeight: "900",
           }}
-          className="text-[42px] leading-[35px] text-center"
+          className="text-[42px] leading-[35px] text-center lg:hidden"
         >
           Marketplace
         </h3>

@@ -12,14 +12,18 @@ const data = [
     img: img2,
     width: 240,
     height: 286,
-    bg: "#979E74",
+    bg: "#789D7C",
+    heightBlue: 119,
+    widthBlue: 174,
   },
   {
     name: "Nodosaurus",
     img: img3,
     width: 258,
     height: 312,
-    bg: "#513E42",
+    bg: "#775E46",
+    heightBlue: 179,
+    widthBlue: 262,
   },
   {
     name: "Spinosaurus",
@@ -27,20 +31,26 @@ const data = [
     width: 338,
     height: 413,
     bg: "#E76153",
+    heightBlue: 142,
+    widthBlue: 212,
   },
   {
     name: "Stegosaurus",
     img: img5,
     width: 258,
     height: 312,
-    bg: "#A6AC7F",
+    heightBlue: 135,
+    widthBlue: 203,
+    bg: "#6C4130",
   },
   {
     name: "Indominus rex",
     img: img4,
     width: 240,
     height: 286,
-    bg: "#624298",
+    bg: "#7951C0",
+    heightBlue: 106,
+    widthBlue: 179,
   },
 ];
 
@@ -51,6 +61,8 @@ const dataMB = [
     width: 198,
     height: 198,
     bg: "#513E42",
+    heightBlue: 119,
+    widthBlue: 174,
   },
   {
     name: "Indominus rex",
@@ -58,6 +70,8 @@ const dataMB = [
     width: 156.19,
     height: 156.19,
     bg: "#624298",
+    heightBlue: 179,
+    widthBlue: 262,
   },
 
   {
@@ -66,6 +80,8 @@ const dataMB = [
     width: 154,
     height: 156.25,
     bg: "#979E74",
+    heightBlue: 119,
+    widthBlue: 174,
   },
 
   {
@@ -104,6 +120,18 @@ const GetDino = () => {
               className="relative"
             >
               <div
+                className="absolute"
+                style={{
+                  filter: `blur(150px)`,
+                  background: `${item.bg}`,
+                  height: item.heightBlue,
+                  width: item.widthBlue,
+                  left: "50%",
+                  top: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              ></div>
+              <div
                 style={{
                   borderRadius: "38px",
                   background: "linear-gradient(0, #171717, #bfbcbc)",
@@ -113,22 +141,36 @@ const GetDino = () => {
                 <div className="absolute inset-0 w-[95%] h-[98%] top-1.5 m-auto">
                   <div
                     style={{ borderRadius: "38px" }}
-                    className="bg-black w-full h-full relative"
+                    className=" w-full h-full relative"
                   >
                     <div
                       style={{ borderRadius: "38px" }}
-                      className="absolute inset-0 h-full w-full overflow-hidden"
+                      className="absolute inset-0 h-full w-full overflow-hidden z-0"
                     >
+                      <div className="absolute inset-0 h-full w-full bg-black z-0" />
                       <div
                         style={{
                           filter: `blur(150px)`,
                           background: `${item.bg}`,
+                          height: item.heightBlue,
+                          width: item.widthBlue,
+                          left: "50%",
+                          top: "50%",
+                          transform: "translate(-50%, -50%)",
                         }}
-                        className="absolute inset-0 h-[258px] w-[378px] opacity-40"
+                        className="absolute inset-0 opacity-100 z-10"
+                      />
+                      <div
+                        style={{
+                          background:
+                            "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+                          borderRadius: "38px",
+                        }}
+                        className="absolute inset-0 h-full w-full z-20"
                       />
                     </div>
 
-                    <div className="flex flex-col items-center pt-6">
+                    <div className="flex flex-col items-center pt-6 relative z-10">
                       <span
                         style={{
                           fontWeight: "900",
@@ -237,6 +279,40 @@ const GetDino = () => {
                 className="h-[98%] w-[100%] m-auto relative"
               >
                 <div className="absolute inset-0 w-[97%] h-[98%] top-1.5 m-auto">
+                  <div className="absolute inset-0 w-[95%] h-[98%] top-1.5 m-auto">
+                    <div
+                      style={{ borderRadius: "38px" }}
+                      className=" w-full h-full relative"
+                    >
+                      <div
+                        style={{ borderRadius: "38px" }}
+                        className="absolute inset-0 h-full w-full overflow-hidden z-0"
+                      >
+                        <div className="absolute inset-0 h-full w-full bg-black z-0" />
+                        <div
+                          style={{
+                            filter: `blur(150px)`,
+                            background: `${item.bg}`,
+                            height: item.heightBlue,
+                            width: item.widthBlue,
+                            left: "50%",
+                            top: "50%",
+                            transform: "translate(-50%, -50%)",
+                          }}
+                          className="absolute inset-0 opacity-100 z-10"
+                        />
+                        <div
+                          style={{
+                            background:
+                              "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+                            borderRadius: "38px",
+                          }}
+                          className="absolute inset-0 h-full w-full z-20"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
                   <div
                     style={{ borderRadius: "16px" }}
                     className="bg-black w-full h-full relative"

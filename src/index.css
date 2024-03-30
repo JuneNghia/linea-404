@@ -335,6 +335,10 @@ toggle span:after {
   transform: scaleX(-1);
 }
 
+.market .slick-slide.slick-active.slick-current {
+  margin: 70px 0;
+}
+
 @media only screen and (min-width: 360px) {
   .roadmap {
     row-gap: 4rem;
