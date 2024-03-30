@@ -820,7 +820,7 @@ const SliderCustom = () => {
                           style={{
                             transform: "matrix(-1, 0, 0, 1, 0, 0)",
                           }}
-                          className="absolute h-[98px] w-[98px] -top-[25px] -left-[25px]"
+                          className="absolute h-[98px] w-[98px] -top-[25px] -left-[20px]"
                         >
                           <img
                             className="h-full w-full object-cover"
@@ -829,7 +829,7 @@ const SliderCustom = () => {
                         </div>
                       )}
                       {index === 6 && (
-                        <div className="absolute h-[100px] w-[91px] -top-[25px] -left-[25px]">
+                        <div className="absolute h-[100px] w-[91px] -top-[25px] -left-[20px]">
                           <img
                             className="h-full w-full object-cover"
                             src={dataMobile[6]?.image}
@@ -842,7 +842,7 @@ const SliderCustom = () => {
                           style={{
                             transform: "matrix(-1, 0, 0, 1, 0, 0)",
                           }}
-                          className="absolute h-[100px] w-[100px] -top-[20px] -left-[28px]"
+                          className="absolute h-[100px] w-[100px] -top-[20px] -left-[22px]"
                         >
                           <img
                             className="h-full w-full object-cover"
@@ -856,7 +856,7 @@ const SliderCustom = () => {
                           style={{
                             transform: "matrix(-1, 0, 0, 1, 0, 0)",
                           }}
-                          className="absolute h-[107px] w-[105px] -top-[25px] -left-[28px]"
+                          className="absolute h-[107px] w-[105px] -top-[25px] -left-[24px]"
                         >
                           <img
                             className="h-full w-full object-cover"
@@ -866,7 +866,7 @@ const SliderCustom = () => {
                       )}
 
                       {index === 9 && (
-                        <div className="absolute h-[107px] w-[103px] -top-[25px] -left-[28px]">
+                        <div className="absolute h-[107px] w-[103px] -top-[25px] -left-[24px]">
                           <img
                             className="h-full w-full object-cover"
                             src={dataMobile[9]?.image}
@@ -879,7 +879,7 @@ const SliderCustom = () => {
                           style={{
                             transform: "matrix(-1, 0, 0, 1, 0, 0)",
                           }}
-                          className="absolute h-[109px] w-[109px] -top-[25px] -left-[28px]"
+                          className="absolute h-[109px] w-[109px] -top-[25px] -left-[24px]"
                         >
                           <img
                             className="h-full w-full object-cover"
@@ -889,7 +889,7 @@ const SliderCustom = () => {
                       )}
 
                       {index === 11 && (
-                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[28px]">
+                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]">
                           <img
                             className="h-full w-full object-cover"
                             src={dataMobile[11]?.image}

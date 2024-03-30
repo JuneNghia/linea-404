@@ -211,7 +211,7 @@ const Roadmap = () => {
                     className="bg-black w-full h-full relative"
                   >
                     <div
-                      className={`absolute ${
+                      className={`absolute z-30 ${
                         index === 1
                           ? "-left-[12px] -top-[82px]"
                           : "-top-[55px] left-[30px]"
@@ -236,9 +236,17 @@ const Roadmap = () => {
                           filter: `blur(150px)`,
                           background: `${item.color}`,
                         }}
-                        className="absolute inset-0 h-[180px] w-[300px] opacity-60"
+                        className="absolute inset-0 h-[180px] w-[300px] opacity-80 z-0"
                       />
-                      <div className="px-4 pt-9">
+                      <div
+                        className="absolute inset-0 m-auto h-[100%] w-[100%] z-10"
+                        style={{
+                          backdropFilter: "blur(12px)",
+                          background:
+                            "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
+                        }}
+                      />
+                      <div className="px-4 pt-9 relative z-30">
                         <div
                           style={{
                             background: item.color,
