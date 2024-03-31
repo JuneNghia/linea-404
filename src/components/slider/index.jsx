@@ -22,6 +22,7 @@ import pic21 from "../../assets/slider/21.png";
 import pic22 from "../../assets/slider/22.png";
 import pic23 from "../../assets/slider/23.png";
 import pic24 from "../../assets/slider/24.png";
+import BG from '../../assets/Noise.png'
 import ethImg from "../../assets/eth.png";
 
 import { useEffect, useRef, useState } from "react";
@@ -462,6 +463,10 @@ const SliderCustom = () => {
                         }}
                         className="absolute inset-0 h-full w-full z-20"
                       />
+                      <div className="absolute inset-0 h-full w-full z-30">
+                        <img className="h-full w-full object-cover" src={BG} alt="" />
+                      </div>
+                 
                     </div>
 
                     <div className="flex flex-col items-center pt-8 relative z-10">

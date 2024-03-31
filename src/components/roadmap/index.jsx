@@ -158,6 +158,7 @@ const Roadmap = () => {
                       left: "50%",
                       transform: "translateX(-50%)",
                       borderRadius: "12px",
+                      background: item.color,
                       fontWeight: "700",
                     }}
                     className="absolute top-12 left-0 right-0 text-center text-[20px] px-3"

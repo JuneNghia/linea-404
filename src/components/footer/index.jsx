@@ -111,14 +111,19 @@ const Footer = () => {
             <div className="h-[130px] relative">
               <div className="absolute bottom-4 left-0">
                 <div className="flex gap-2">
-                  <div    style={{
-                        background: "rgba(255, 255, 255, 0.1)",
-                      }} className="h-[60px] w-[60px] flex justify-center items-center relative">
-                    <a target="_blank" href="https://twitter.com/linea_erc404" className="h-full w-full relative z-10"></a>
+                  <div
+                    style={{
+                      background: "rgba(255, 255, 255, 0.1)",
+                    }}
+                    className="h-[60px] w-[60px] flex justify-center items-center relative"
+                  >
+                    <a
+                      target="_blank"
+                      href="https://twitter.com/linea_erc404"
+                      className="h-full w-full relative z-10"
+                    ></a>
                     <img className="absolute" src={Twitter} />
-
                   </div>
-             
 
                   <a target="_blank" href="/">
                     <div
@@ -211,7 +216,11 @@ const Footer = () => {
         </div>
 
         <div className="flex gap-2 justify-center pt-4">
-          <a className="" target="_blank" href="https://twitter.com/linea_erc404">
+          <a
+            className=""
+            target="_blank"
+            href="https://twitter.com/linea_erc404"
+          >
             <div
               className="h-[51px] w-[51px] flex justify-center items-center"
               style={{
