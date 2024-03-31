@@ -466,7 +466,7 @@ const SliderCustom = () => {
               <div
                 className={`absolute ${
                   [1, 2, 5, 6, 9, 10, 13, 14, 17, 18, 21, 22].includes(index)
-                    ? `h-[170px] w-[280px]`
+                    ? `h-[130px] w-[280px]`
                     : ""
                 }`}
                 style={{
