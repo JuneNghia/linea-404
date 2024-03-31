@@ -88,7 +88,7 @@ const Intro = () => {
             backgroundBlendMode: "color-dodge",
             mixBlendMode: "color-dodge",
           }}
-          className="-top-[8px] absolute w-[797px] h-[190px] opacity-90 -left-[232px] z-10"
+          className="-top-[8px] absolute w-[797px] lg:top-[30px] lg:w-[1037px] lg:-left-[258px] lg:h-[100px] h-[190px] lg:opacity-60 opacity-90 -left-[160px] z-10"
         />
 
         <div

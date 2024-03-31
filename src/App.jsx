@@ -9,11 +9,16 @@ import GetDino from "./components/get_dino";
 import AboutUs from "./components/about_us";
 import Marketplace from "./components/marketplace";
 import JoinUs from "./components/join_us";
+import BG from './assets/Noise1.png'
 
 function App() {
   return (
     <>
-      <div className="w-screen overflow-hidden">
+      <div className="w-screen overflow-hidden relative">
+        <div className="fixed top-0 h-screen w-screen z-10">
+        <img className="h-full w-full object-cover" src={BG} alt="" />
+        </div>
+        <div className="relative z-0">
         <Header />
         <div id="home">
           <Intro />
@@ -51,6 +56,8 @@ function App() {
         <div id="footer">
           <Footer />
         </div> 
+        </div>
+     
       </div>
     </>
   );
