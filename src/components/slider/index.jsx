@@ -22,8 +22,11 @@ import pic21 from "../../assets/slider/21.png";
 import pic22 from "../../assets/slider/22.png";
 import pic23 from "../../assets/slider/23.png";
 import pic24 from "../../assets/slider/24.png";
-import BG from '../../assets/Noise.png'
+import pic27 from "../../assets/slider/25.png";
+import pic26 from "../../assets/slider/26.png";
+import BG from "../../assets/Noise.png";
 import ethImg from "../../assets/eth.png";
+import pic25 from "../../assets/get-dino/3.png";
 
 import { useEffect, useRef, useState } from "react";
 import PopupMinting from "../popup";
@@ -245,6 +248,31 @@ const dataMobile = [
     image: pic12,
     bg: "4D535E",
   },
+
+  {
+    name: "Stegosaurus",
+    image: pic4,
+    bg: "961E18",
+  },
+
+  {
+    name: "Dilophosaurus",
+    image: pic13,
+    bg: "AFA748",
+  },
+
+  {
+    name: "Paychycephalosaurus",
+    image: pic15,
+    bg: "E19242",
+  },
+
+  {
+    name: "Nodosaurus",
+    image: pic25,
+    bg: "4D535E",
+  },
+
   {
     name: "Pteranodon",
     image: pic2,
@@ -263,6 +291,26 @@ const dataMobile = [
   {
     name: "Triceratops",
     image: pic1,
+    bg: "4E6F73",
+  },
+  {
+    name: "Carnotaurus",
+    image: pic27,
+    bg: "BE5A35",
+  },
+  {
+    name: "Indominus Rex",
+    image: pic26,
+    bg: "4D535E",
+  },
+  {
+    name: "Baryonyx",
+    image: pic10,
+    bg: "AFA748",
+  },
+  {
+    name: "Spinosaurus",
+    image: pic6,
     bg: "4E6F73",
   },
 ];
@@ -415,12 +463,16 @@ const SliderCustom = () => {
         >
           {data.map((item, index) => (
             <div key={index} className="relative w-full h-[378px] my-10">
-                    <div
-                className={`absolute ${[1,2,5,6,9,10,13,14,17,18,21,22].includes(index) ? `h-[170px] w-[280px]` : ""}`}
+              <div
+                className={`absolute ${
+                  [1, 2, 5, 6, 9, 10, 13, 14, 17, 18, 21, 22].includes(index)
+                    ? `h-[170px] w-[280px]`
+                    : ""
+                }`}
                 style={{
                   filter: `blur(150px)`,
                   background: `#${item.bg}`,
-           
+
                   left: "50%",
                   top: "50%",
                   transform: "translate(-50%, -50%)",
@@ -438,7 +490,7 @@ const SliderCustom = () => {
                     style={{ borderRadius: "38px" }}
                     className="w-full h-full relative"
                   >
-                       <div
+                    <div
                       style={{ borderRadius: "38px" }}
                       className="absolute inset-0 h-full w-full overflow-hidden z-0"
                     >
@@ -464,9 +516,12 @@ const SliderCustom = () => {
                         className="absolute inset-0 h-full w-full z-20"
                       />
                       <div className="absolute inset-0 h-full w-full z-30">
-                        <img className="h-full w-full object-cover" src={BG} alt="" />
+                        <img
+                          className="h-full w-full object-cover"
+                          src={BG}
+                          alt=""
+                        />
                       </div>
-                 
                     </div>
 
                     <div className="flex flex-col items-center pt-8 relative z-10">
@@ -486,255 +541,253 @@ const SliderCustom = () => {
                         <img className="w-[10px] h-[14px]" src={ethImg} />
                         <span>0.0018</span>
                       </span>
-
-
                     </div>
 
                     {index === 0 && (
-                        <div className="absolute -bottom-[56px] left-[-50px] w-[353px] object-cover h-[348px] ">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[0]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 1 && (
-                        <div className="absolute h-[360px] w-[368px] left-[-50px]  -bottom-[60px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[1]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 2 && (
-                        <div className="absolute h-[369px] w-[369px] -bottom-[50px] -left-[55px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[2]?.image}
-                          />
-                        </div>
-                      )}
-                      {index === 3 && (
-                        <div className="absolute h-[349px] w-[360px] -bottom-[50px] -left-[35px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[3]?.image}
-                          />
-                        </div>
-                      )}
-                      {index === 4 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[345px] w-[345px] -bottom-[50px] -left-[35px]"
-                        >
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[4]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 5 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[326px] w-[326px] -bottom-[40px] -left-[35px]"
-                        >
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[5]?.image}
-                          />
-                        </div>
-                      )}
-                      {index === 6 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[365px] w-[365px] -bottom-[70px] -left-[50px]"
-                        >
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[6]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 7 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[335px] w-[340px] -bottom-[50px] -left-[40px]"
-                        >
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[7]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 8 && (
-                        <div className="absolute h-[328px] w-[333px] -bottom-[40px] -left-[35px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[8]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 9 && (
-                        <div className="absolute h-[305px] w-[338px] -bottom-[40px] -left-[35px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[9]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 10 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[349px] w-[349px] -bottom-[50px] -left-[45px]"
-                        >
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[10]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 11 && (
-                        <div className="absolute h-[340px] w-[320px] -bottom-[50px] -left-[20px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[11]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 12 && (
-                        <div className="absolute h-[289px] w-[299px] -bottom-[30px] -left-[15px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[12]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 13 && (
-                        <div className="absolute h-[314px] w-[312px] -bottom-[50px] -left-[25px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[13]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 14 && (
-                        <div className="absolute h-[312px] w-[326px] -bottom-[20px] -left-[35px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[14]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 15 && (
-                        <div className="absolute h-[293px] w-[305px] -bottom-[10px] -left-[10px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[15]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 16 && (
-                        <div className="absolute h-[349px] w-[360px] -bottom-[50px] -left-[35px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[3]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 17 && (
-                        <div className="absolute h-[289px] w-[299px] -bottom-[30px] -left-[15px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[12]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 18 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[365px] w-[365px] -bottom-[70px] -left-[50px]"
-                        >
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[6]?.image}
-                          />
-                        </div>
-                      )}
-
-                      {index === 19 && (
+                      <div className="absolute -bottom-[56px] left-[-50px] w-[353px] object-cover h-[348px] ">
                         <img
-                          className="absolute -bottom-[56px] left-[-5px] w-[353px] object-cover h-[348px]"
+                          className="h-full w-full object-cover"
                           src={data[0]?.image}
                         />
-                      )}
+                      </div>
+                    )}
 
-                      {index === 20 && (
-                        <div className="absolute h-[305px] w-[338px] -bottom-[40px] -left-[35px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[9]?.image}
-                          />
-                        </div>
-                      )}
+                    {index === 1 && (
+                      <div className="absolute h-[360px] w-[368px] left-[-50px]  -bottom-[60px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[1]?.image}
+                        />
+                      </div>
+                    )}
 
-                      {index === 21 && (
-                        <div className="absolute h-[360px] w-[368px] -bottom-[60px] -left-[50px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[1]?.image}
-                          />
-                        </div>
-                      )}
+                    {index === 2 && (
+                      <div className="absolute h-[369px] w-[369px] -bottom-[50px] -left-[55px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[2]?.image}
+                        />
+                      </div>
+                    )}
+                    {index === 3 && (
+                      <div className="absolute h-[349px] w-[360px] -bottom-[50px] -left-[35px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[3]?.image}
+                        />
+                      </div>
+                    )}
+                    {index === 4 && (
+                      <div
+                        style={{
+                          transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                        }}
+                        className="absolute h-[345px] w-[345px] -bottom-[50px] -left-[35px]"
+                      >
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[4]?.image}
+                        />
+                      </div>
+                    )}
 
-                      {index === 22 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[326px] w-[326px] -bottom-[40px] -left-[30px]"
-                        >
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[5]?.image}
-                          />
-                        </div>
-                      )}
+                    {index === 5 && (
+                      <div
+                        style={{
+                          transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                        }}
+                        className="absolute h-[326px] w-[326px] -bottom-[40px] -left-[35px]"
+                      >
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[5]?.image}
+                        />
+                      </div>
+                    )}
+                    {index === 6 && (
+                      <div
+                        style={{
+                          transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                        }}
+                        className="absolute h-[365px] w-[365px] -bottom-[70px] -left-[50px]"
+                      >
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[6]?.image}
+                        />
+                      </div>
+                    )}
 
-                      {index === 23 && (
-                        <div className="absolute h-[369px] w-[369px] -bottom-[50px] -left-[55px]">
-                          <img
-                            className="h-full w-full object-cover"
-                            src={data[2]?.image}
-                          />
-                        </div>
-                      )}
+                    {index === 7 && (
+                      <div
+                        style={{
+                          transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                        }}
+                        className="absolute h-[335px] w-[340px] -bottom-[50px] -left-[40px]"
+                      >
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[7]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 8 && (
+                      <div className="absolute h-[328px] w-[333px] -bottom-[40px] -left-[35px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[8]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 9 && (
+                      <div className="absolute h-[305px] w-[338px] -bottom-[40px] -left-[35px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[9]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 10 && (
+                      <div
+                        style={{
+                          transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                        }}
+                        className="absolute h-[349px] w-[349px] -bottom-[50px] -left-[45px]"
+                      >
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[10]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 11 && (
+                      <div className="absolute h-[340px] w-[320px] -bottom-[50px] -left-[20px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[11]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 12 && (
+                      <div className="absolute h-[289px] w-[299px] -bottom-[30px] -left-[15px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[12]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 13 && (
+                      <div className="absolute h-[314px] w-[312px] -bottom-[50px] -left-[25px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[13]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 14 && (
+                      <div className="absolute h-[312px] w-[326px] -bottom-[20px] -left-[35px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[14]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 15 && (
+                      <div className="absolute h-[293px] w-[305px] -bottom-[10px] -left-[10px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[15]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 16 && (
+                      <div className="absolute h-[349px] w-[360px] -bottom-[50px] -left-[35px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[3]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 17 && (
+                      <div className="absolute h-[289px] w-[299px] -bottom-[30px] -left-[15px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[12]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 18 && (
+                      <div
+                        style={{
+                          transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                        }}
+                        className="absolute h-[365px] w-[365px] -bottom-[70px] -left-[50px]"
+                      >
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[6]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 19 && (
+                      <img
+                        className="absolute -bottom-[56px] left-[-5px] w-[353px] object-cover h-[348px]"
+                        src={data[0]?.image}
+                      />
+                    )}
+
+                    {index === 20 && (
+                      <div className="absolute h-[305px] w-[338px] -bottom-[40px] -left-[35px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[9]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 21 && (
+                      <div className="absolute h-[360px] w-[368px] -bottom-[60px] -left-[50px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[1]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 22 && (
+                      <div
+                        style={{
+                          transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                        }}
+                        className="absolute h-[326px] w-[326px] -bottom-[40px] -left-[30px]"
+                      >
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[5]?.image}
+                        />
+                      </div>
+                    )}
+
+                    {index === 23 && (
+                      <div className="absolute h-[369px] w-[369px] -bottom-[50px] -left-[55px]">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={data[2]?.image}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -791,7 +844,6 @@ const SliderCustom = () => {
               key={index}
               className="relative w-full h-[62px] my-2"
             >
-              
               <div
                 style={{
                   borderRadius: "16px",
@@ -823,7 +875,7 @@ const SliderCustom = () => {
                           <span
                             style={{
                               fontWeight: "800",
-                              fontSize: "20px",
+                              fontSize: "16px",
                               fontStyle: "normal",
                               lineHeight: "18px",
                               letterSpacing: "-1px",
@@ -933,12 +985,7 @@ const SliderCustom = () => {
                       )}
 
                       {index === 8 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[107px] w-[105px] -top-[25px] -left-[24px]"
-                        >
+                        <div className="absolute h-[107px] w-[105px] -top-[25px] -left-[24px]">
                           <img
                             className="h-full w-full object-cover"
                             src={dataMobile[8]?.image}
@@ -956,12 +1003,7 @@ const SliderCustom = () => {
                       )}
 
                       {index === 10 && (
-                        <div
-                          style={{
-                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
-                          }}
-                          className="absolute h-[109px] w-[109px] -top-[25px] -left-[24px]"
-                        >
+                        <div className="absolute h-[109px] w-[109px] -top-[25px] -left-[24px]">
                           <img
                             className="h-full w-full object-cover"
                             src={dataMobile[10]?.image}
@@ -974,6 +1016,88 @@ const SliderCustom = () => {
                           <img
                             className="h-full w-full object-cover"
                             src={dataMobile[11]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 12 && (
+                        <div
+                          style={{
+                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                          }}
+                          className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]"
+                        >
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[12]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 13 && (
+                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[13]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 13 && (
+                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[13]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 14 && (
+                        <div
+                          style={{
+                            transform: "matrix(-1, 0, 0, 1, 0, 0)",
+                          }}
+                          className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]"
+                        >
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[14]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 15 && (
+                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[15]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 16 && (
+                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[16]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 17 && (
+                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[17]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 18 && (
+                        <div className="absolute h-[98px] w-[98px] -top-[20px] -left-[24px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[18]?.image}
+                          />
+                        </div>
+                      )}
+                      {index === 19 && (
+                        <div className="absolute h-[109px] w-[108px] -top-[25px] -left-[24px]">
+                          <img
+                            className="h-full w-full object-cover"
+                            src={dataMobile[19]?.image}
                           />
                         </div>
                       )}

@@ -50,7 +50,7 @@ const MintNow = () => {
             </div>
           </div>
 
-          <div className="flex-1 pt-12 lg:pt-0">
+          <div className="flex-1 pt-12 lg:pt-0 hidden lg:block">
             {listItem.map((item, index) => (
               <div
                 className={`lg:h-[180px] ${
@@ -60,7 +60,42 @@ const MintNow = () => {
                   border: "0.5px solid #8eb1ff6b",
                   background: `${
                     index !== 1 &&
-                    "linear-gradient(180deg, #789D7C -65%, rgba(0, 0, 0, 0) 100%)"
+                    "linear-gradient(180deg, #789D7C -100%, rgba(0, 0, 0, 0) 50%)"
+                  }`,
+                  transform: "matrix(1, 0, 0, -1, 0, 0)",
+                }}
+                key={index}
+              >
+                <div
+                  style={{
+                    transform: "matrix(1, 0, 0, -1, 0, 0)",
+                  }}
+                  className="absolute inset-0 flex justify-center items-center flex-col"
+                >
+                  <div className={`px-5 lg:px-10`}>
+                    <h4 className="text-[#789D7C] text-[20px] lg:text-[24px] leading-8 font-bold lg:pb-2">
+                      {item.title}
+                    </h4>
+                    <span className="text-[13px] lg:text-[19px] leading-[19px] lg:leading-6 text-white/80 lg:mt-1">
+                      {item.content}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex-1 pt-12 lg:pt-0 lg:hidden">
+            {listItem.map((item, index) => (
+              <div
+                className={`lg:h-[180px] ${
+                  index === 2 ? "h-[130px]" : "h-[210px]"
+                }  w-full relative`}
+                style={{
+                  border: "0.5px solid #8eb1ff6b",
+                  background: `${
+                    index !== 1 &&
+                    "linear-gradient(180deg, #789D7C -200%, rgba(0, 0, 0, 0) 50%)"
                   }`,
                   transform: "matrix(1, 0, 0, -1, 0, 0)",
                 }}
