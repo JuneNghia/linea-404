@@ -88,7 +88,7 @@ const Intro = () => {
             backgroundBlendMode: "color-dodge",
             mixBlendMode: "color-dodge",
           }}
-          className="-top-[8px] absolute w-[797px] lg:top-[30px] lg:w-[1037px] lg:-left-[258px] lg:h-[100px] h-[190px] lg:opacity-60 opacity-90 -left-[160px] z-10"
+          className="top-[100px] absolute w-[380px] lg:top-[30px] lg:w-[1037px] lg:-left-[258px] lg:h-[100px] h-[190px] lg:opacity-60 opacity-90 -left-[160px] z-10"
         />
 
         <div
@@ -109,7 +109,7 @@ const Intro = () => {
             left: "50%",
             transform: "translateX(-50%)",
           }}
-          className="top-[100px] lg:hidden absolute w-[1203px] h-[190px] opacity-60 left-0 right-0 z-20"
+          className="top-[170px] lg:hidden absolute w-[380px] h-[50px] opacity-60 left-0 right-0 z-20"
         />
 
       <div
