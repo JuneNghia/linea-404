@@ -54,7 +54,7 @@ const MintNow = () => {
             {listItem.map((item, index) => (
               <div
                 className={`lg:h-[180px] ${
-                  index === 2 ? "h-[130px]" : "h-[200px]"
+                  index === 2 ? "h-[130px]" : "h-[210px]"
                 }  w-full relative`}
                 style={{
                   border: "0.5px solid #8eb1ff6b",

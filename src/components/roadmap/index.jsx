@@ -199,12 +199,23 @@ const Roadmap = () => {
                   : "h-[180px]"
               } my-2`}
             >
+              <div style={{
+                background: item.color,
+                height: "120px",
+                width: "250px",
+                top: "50%",
+                left: "50%",
+                filter: `blur(150px)`,
+
+                transform: "translate(-50%, -50%)",
+                
+              }} className="absolute z-0"/>
               <div
                 style={{
                   borderRadius: "16px",
                   background: "linear-gradient(0, #171717, #bfbcbc)",
                 }}
-                className="h-[98%] w-[90%] m-auto relative"
+                className="h-[98%] w-[90%] m-auto relative z-10"
               >
                 <div className="absolute inset-0 w-[98%] h-[99%] top-1.5 m-auto">
                   <div

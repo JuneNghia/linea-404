@@ -109,7 +109,7 @@ const Intro = () => {
             left: "50%",
             transform: "translateX(-50%)",
           }}
-          className="top-[145px] lg:hidden absolute w-[350px] h-[100px] opacity-70 left-0 right-0 z-20"
+          className="top-[100px] lg:hidden absolute w-[1203px] h-[190px] opacity-60 left-0 right-0 z-20"
         />
 
       <div
