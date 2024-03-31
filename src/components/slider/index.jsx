@@ -75,7 +75,7 @@ const data = [
     widthBlur: "348px",
   },
   {
-    name: "Ankylosaurus",
+    name: "Mosasaurus",
     image: pic7,
     bg: "6AAFC3",
     heightBlur: "181px",
@@ -131,7 +131,7 @@ const data = [
     widthBlur: "298px",
   },
   {
-    name: "Mosasaurus",
+    name: "Paychycephalosaurus",
     image: pic15,
     bg: "E19242",
     heightBlur: "204px",
@@ -145,7 +145,7 @@ const data = [
     widthBlur: "298px",
   },
   {
-    name: "Ankylosaurus",
+    name: "Stegosaurus",
     image: pic17,
     bg: "AFA748",
     heightBlur: "204px",
@@ -180,7 +180,7 @@ const data = [
     widthBlur: "298px",
   },
   {
-    name: "Ankylosaurus",
+    name: "Pteranodon",
     image: pic22,
     bg: "95B0AE",
     heightBlur: "204px",
@@ -194,7 +194,7 @@ const data = [
     widthBlur: "298px",
   },
   {
-    name: "Indominus",
+    name: "Indominus rex",
     image: pic24,
     bg: "764CC0",
     heightBlur: "204px",
@@ -415,7 +415,7 @@ const SliderCustom = () => {
           {data.map((item, index) => (
             <div key={index} className="relative w-full h-[378px] my-10">
                     <div
-                className={`absolute ${[1,2,5,6,9,10,13,14,17,18,21,22].includes(index) ? `h-[120px] w-[240px]` : ""}`}
+                className={`absolute ${[1,2,5,6,9,10,13,14,17,18,21,22].includes(index) ? `h-[170px] w-[280px]` : ""}`}
                 style={{
                   filter: `blur(150px)`,
                   background: `#${item.bg}`,
@@ -700,7 +700,7 @@ const SliderCustom = () => {
                       )}
 
                       {index === 21 && (
-                        <div className="absolute h-[360px] w-[368px] -bottom-[60px]">
+                        <div className="absolute h-[360px] w-[368px] -bottom-[60px] -left-[50px]">
                           <img
                             className="h-full w-full object-cover"
                             src={data[1]?.image}
@@ -713,7 +713,7 @@ const SliderCustom = () => {
                           style={{
                             transform: "matrix(-1, 0, 0, 1, 0, 0)",
                           }}
-                          className="absolute h-[326px] w-[326px] -bottom-[40px] -left-[35px]"
+                          className="absolute h-[326px] w-[326px] -bottom-[40px] -left-[30px]"
                         >
                           <img
                             className="h-full w-full object-cover"

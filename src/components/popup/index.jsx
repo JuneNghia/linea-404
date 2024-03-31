@@ -88,12 +88,11 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                     <div className="relative h-[130px] lg:h-[188px] w-full">
                       <div className="lg:w-[187px] w-[109px] h-[113px] lg:h-[191px] absolute left-[70px] lg:left-[145px] z-10">
                         <div
-                          className="flex justify-center items-center"
+                          className="flex justify-center items-center h-[113px] w-[109px] lg:h-[171.55px] lg:w-[165.19px]"
                           style={{
                             borderRadius: "8px",
                             transform: "rotate(-7.58deg)",
-                            width: "109px",
-                            height: "113px",
+                         
                             overflow: "hidden",
                           }}
                         >
@@ -123,20 +122,20 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                               background: "#FFFFFF",
                               height: "40.25px",
                               width: "27.38px",
-                              left: "12px",
+                              left: "14px",
                               backdropFilter: "blur(150px)",
                               bottom: "46px",
                             }}
                             className="absolute z-0"
                           />
                           <div
+                          className="h-[96.1px] w-[89.5px] lg:h-[146.13px] lg:w-[136.15px]"
                             style={{
                               backgroundColor: "#EC811F",
                               borderRadius: "8px",
                               boxShadow:
                                 "inset 0px 0px 4px rgba(0, 0, 0, 0.25)",
-                              height: "96.1px",
-                              width: "89.5px",
+                 
                               position: "relative",
                               zIndex: 30,
                             }}
@@ -146,17 +145,16 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                         </div>
                       </div>
 
-                      <div className="w-[100px] h-[103.6px] absolute top-1.5 right-[68px] lg:right-[95px] z-0">
+                      <div className="w-[100px] h-[103.6px] lg:h-[157.55px] lg:w-[151.72px] absolute top-1.5 right-[68px] lg:right-[130px] z-0">
                         <div
-                          className="flex justify-center items-center"
+                          className="flex justify-center items-center h-[100px] w-[103.6px] lg:h-[157.55px] lg:w-[151.72px]"
                           style={{
                             background:
                               "radial-gradient(100% 100% at 0% 0%, rgba(250, 250, 250, 0.2) 0%, rgba(247, 247, 247, 0) 100%)",
                             backdropFilter: "blur(12px)",
                             borderRadius: "8px",
                             transform: "rotate(4.66deg)",
-                            width: "100px",
-                            height: "103.6px",
+                        
                           }}
                         >
                           <div
@@ -181,13 +179,13 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                           />
 
                           <div
+                          className="h-[88.2px] w-[82.2px] lg:h-[134.21px] lg:w-[125.4px]"
                             style={{
                               backgroundColor: "#789D7C",
                               borderRadius: "8px",
                               boxShadow:
                                 "inset 0px 0px 4px rgba(0, 0, 0, 0.25)",
-                              width: "82.2px",
-                              height: "88.2px",
+                  
                               position: "relative",
                               zIndex: 20,
                             }}
@@ -232,13 +230,14 @@ const PopupMinting = ({ popupMinting, setPopupMinting }) => {
                     </li>
                   </ul>
                   <button
+                  disabled
                     style={{
                       fontWeight: "700",
                       padding: "12px 0px",
                       borderRadius: "20px",
                       lineHeight: "24px",
                     }}
-                    className="bg-[#7C9B7C] lg:text-[20px] text-white uppercase text-[16px] w-full flex justify-center items-center opacity-90 hover:opacity-100 border-none transition-all active:opacity-80 active:border-none"
+                    className="bg-gray-200 hover:bg-gray-200 lg:text-[20px] text-white uppercase text-[16px] w-full flex justify-center items-center opacity-90  border-none transition-all active:opacity-80 active:border-none"
                   >
                     Mint Now
                   </button>

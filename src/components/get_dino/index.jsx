@@ -124,8 +124,8 @@ const GetDino = () => {
                 style={{
                   filter: `blur(150px)`,
                   background: `${item.bg}`,
-                  height: item.heightBlue,
-                  width: item.widthBlue,
+                  height: item.heightBlue + 30,
+                  width: item.widthBlue + 30,
                   left: "50%",
                   top: "50%",
                   transform: "translate(-50%, -50%)",
