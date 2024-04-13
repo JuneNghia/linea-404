@@ -9,13 +9,21 @@ function App() {
 
   return (
     <div className="h-screen !text-white w-screen flex justify-center items-center">
-      <p className="!text-white">
-        <span className="flex justify-center">
+      <p className="!text-white ">
+        <div className="hidden md:block">
           Xin vui lòng đợi trong giây lát, bạn đang được chuyển hướng...
-        </span>
-        <span className="flex justify-center">
+        </div>
+        <div className="md:hidden">
+          <div className="flex justify-center">
+            Bạn đang được chuyển hướng...
+          </div>
+          <div className="flex justify-center">
+            Xin vui lòng đợi trong giây lát
+          </div>
+        </div>
+        <div className="flex justify-center">
           Lưu ý: Không tắt trang hoặc trình duyệt !
-        </span>
+        </div>
       </p>
     </div>
   );
